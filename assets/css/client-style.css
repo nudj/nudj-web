@@ -1,0 +1,434 @@
+@import url("fonts-style.css");
+@import url("colors-style.css");
+
+/*         POWERED BY - HEADER       */
+
+.poweredby {
+  width:100%;
+  position: fixed;
+  top: 0;
+  background: white;
+  height: 75px;
+  z-index: 300;
+}
+
+.poweredby .poweredby-content {
+  width: 70%;
+  margin: auto;
+  padding: 22px 0px 7px 0px;
+}
+
+.poweredby .poweredby-logo {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.poweredby .poweredby-logo img {
+  height: 28.5px;
+}
+
+.poweredby .poweredby-text {
+  display: block;
+  float: left;
+  font-size: 11px;
+  font-family: Avenir;
+  margin-right: 6px;
+  margin-top: 9px;
+  letter-spacing: 1px;
+}
+
+/*         CLIENT HEADER       */
+.client-header {
+  width: 70%;
+  margin:auto;
+  display: table;
+  background-size:cover;
+  position:relative;
+  height:100vh;
+  display: flex;
+}
+
+.client-header .client-information {
+  width: 54%;
+  float: left;
+  align-self: center;
+  display: block;
+  padding: 30px 0;
+}
+
+.client-header .client-information2 {
+  width: 54%;
+  float: left;
+  align-self: center;
+  display: block;
+  padding: 30px 0;
+}
+
+.client-header .client-photo {
+  max-width: 330px;
+  float: right;
+  align-self: center;
+}
+
+.client-photo .photo1 {
+  background: #fff none repeat scroll 0 0;
+  padding: 12px;
+  width: 150px;
+  z-index: 2;
+  position: relative;
+}
+
+.client-photo .photo2 {
+  z-index: 1;
+  width:235px;
+  margin:-110px 0 0 125px;
+}
+
+.client-photo .client-logo {
+  width: 150px;
+  overflow: hidden;
+}
+
+.client-header .client-logo img {
+  width: 150px;
+}
+
+.client-header .client2-logo {
+  width: 250px;
+  overflow: hidden;
+}
+
+.client-header .client2-logo img {
+  width: 250px;
+}
+
+.client-job {
+  font-size: 25px;
+  font-family: 'AvenirNextLight';
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.client2-job {
+  font-size: 25px;
+  font-family: 'AvenirNextLight';
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.client-location {
+  font-family: Avenir;
+  font-size: 10px;
+  letter-spacing: 1px;
+  opacity: 0.3;
+  text-transform: uppercase;
+}
+
+.apply-container {
+  margin-top: 25px;
+}
+
+.apply-container .apply-button {
+  background-color: #F5F5F2;
+  border-radius: 16px;
+  color: #000;
+  text-transform: uppercase;
+  font-family: 'Gotham Rounded Book';
+  font-size: 10px;
+  padding: 0px 18px;
+  letter-spacing: 1px;
+  height: 29px;
+  float:left;
+  margin-right: 6px;
+}
+
+.apply-container .apply-button2 {
+  background-color: var(--green-color);
+  border-radius: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Gotham Rounded Book';
+  font-size: 10px;
+  padding: 0px 13px;
+  letter-spacing: 1px;
+  height: 29px;
+}
+
+.apply-container .copy-button {
+  background-color: var(--green-color);
+  border-radius: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Gotham Rounded Book';
+  font-size: 10px;
+  padding: 0px 34px;
+  letter-spacing: 1px;
+  height: 29px;
+  position: absolute;
+  z-index: 4;
+  left:0;
+  display: none;
+}
+
+.apply-container .nudj-button {
+  font-family: 'Gotham Rounded Medium';
+  font-size: 11px;
+}
+
+.voucher {
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+.voucher img {
+  max-width: 430px;
+}
+
+/*       FIND OUT MORE      */
+.find-more {
+  margin: auto;
+  margin-top: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -20px;
+  background-color: white;
+}
+
+.client-header .find-more {
+  margin-left: -55px;
+  margin-bottom: 20px;
+}
+
+.find-more .find-more-button {
+  font-size: 10px;
+  font-family: 'Gotham Rounded Medium';
+  letter-spacing: 1px;
+  margin:auto;
+  display:block;
+  margin-bottom: -10px;
+}
+
+.find-more .arrow-down-button {
+  margin:auto;
+  display:block;
+}
+
+.find-more .arrow-down-button img {
+  width: 25px;
+}
+
+
+/*       CLIENT - SECTION 1          */
+.client-section1 {
+  width:70%;
+  margin:auto;
+  padding-top:150px;
+  margin-bottom: 50px;
+}
+
+/*       CLIENT - SECTIONS - GENERAL      */
+.client-section-title {
+  text-align: center;
+  font-family: AvenirNextLight;
+  letter-spacing: 1px;
+  font-size: 25px;
+  margin-bottom: 20px !important;
+  margin-top: 25px !important;
+  text-transform: uppercase;
+}
+
+.client-section-pretitle {
+  text-align: center;
+  font-family: Avenir;
+  font-size: 8px;
+  opacity: 0.3;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.client-section-description {
+  text-align: center;
+  font-family: 'Avenir';
+  font-size: 13px;
+  opacity: 0.3;
+  line-height: 28px;
+}
+
+.client-list-description {
+  font-family: 'Avenir';
+  font-size: 13px;
+  line-height: 28px;
+}
+
+.client-list-description .list-lines {
+  line-height: 16px;
+  padding: 2px 0;
+  opacity: 0.3;
+  padding-left: 10px;
+}
+
+.client-section-button {
+  font-family: 'Gotham Rounded Book';
+  background-color:  var(--green-color);
+  border-radius: 18px;
+  border-width: 0;
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 1px;
+  height: 32px;
+  padding: 0 26px;
+  display: block;
+  margin: auto;
+}
+
+.client-section-button-container {
+  width: 156px;
+  margin: 24px auto auto;
+}
+
+/*     CLIENT - SECTION 2     */
+
+.client-section2 {
+  width:70%;
+  margin:auto;
+}
+
+/*     CLIENT - SECTION 3     */
+
+.client-section3 {
+  width:70%;
+  margin:auto;
+}
+
+/*     CLIENT - SECTION 4     */
+
+.client-section4 {
+  width:70%;
+  margin:auto;
+}
+
+/*     CLIENT - SECTION 5     */
+
+.client-section5 {
+  width:70%;
+  margin:auto;
+  margin-bottom: 100px;
+}
+
+.client-section5 .client-nudj-button {
+  font-size: 10px;
+  font-family: 'Gotham Rounded Medium';
+  display: block;
+  margin: auto;
+  margin-top: 10px !important;
+}
+
+/*          GENERAL         */
+
+.max-width650 {
+  max-width: 650px;
+  margin: auto;
+}
+
+.max-width850 {
+  max-width: 850px;
+  margin: auto;
+}
+
+.max-width740 {
+    max-width: 740px;
+    margin: auto;
+}
+
+.max-width840 {
+    max-width: 840px;
+    margin: auto;
+}
+
+.max-width920 {
+    max-width: 920px;
+    margin: auto;
+}
+
+.max-width530 {
+    max-width: 530px;
+    margin: auto;
+}
+
+.margin-top45 {
+  margin-top: 45px !important;
+}
+
+.margin-bottom45 {
+  margin-bottom: 45px !important;
+}
+
+.margin-bottom0{
+  margin-bottom: 0;
+}
+
+.padding-top100{
+  padding-top: 100px;
+}
+
+.addthis_inline_share_toolbox {
+  margin-left: -2px;
+  margin-top: 20px;
+  height: 35px;
+}
+
+.margin-left33 {
+  margin-left: 33px!important;
+}
+
+.client-section-button-containerB {
+  width: 234px;
+  margin: 24px auto auto;
+}
+
+.apply-buttonB {
+  background-color: #F5F5F2;
+  border-radius: 16px;
+  color: #000;
+  text-transform: uppercase;
+  font-family: 'Gotham Rounded Book';
+  font-size: 10px;
+  padding: 0px 18px;
+  letter-spacing: 1px;
+  height: 29px;
+  float:left;
+  margin-right: 6px;
+  margin-bottom: 20px;
+}
+
+.apply-button2B {
+  background-color: var(--green-color);
+  border-radius: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Gotham Rounded Book';
+  font-size: 10px;
+  padding: 0px 13px;
+  letter-spacing: 1px;
+  height: 29px;
+}
+
+.copy-buttonB {
+  background-color: var(--green-color);
+  border-radius: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Gotham Rounded Book';
+  font-size: 10px;
+  padding: 0px 34px;
+  letter-spacing: 1px;
+  height: 29px;
+  position: absolute;
+  z-index: 4;
+  left:50%;
+  margin-left: -117px;
+  display: none;
+}
