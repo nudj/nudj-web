@@ -3,33 +3,54 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Apply extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
-	public function index()
-	{
-		$this->load->view('apply_ct');
-	}
+
+	public function __construct()
+    {
+        parent::__construct();
+    }
+
+    public function index() {
+    	
+    	$this->load->model('job_model');
+
+    	$jobID =  $this->uri->segment(3);
+
+    	$data = [];
+
+    	if(!isset($jobID)) {
+    		show_404();
+    	}
+
+    	$jobDetails = $this->job_model->fetchJobDetails($jobID);
+
+    	if(isset($jobDetails['title_job'])) {
+
+    		$data['job'] = $jobDetails;
+
+    	} else {
+    		show_404();
+    	}
+
+    	$this->load->view('templates/header');
+		$this->load->view('templates/powered_by');
+		$this->load->view('apply/template_apply_view', $data);
+		$this->load->view('templates/footer');
+
+    }
 
 	public function ct()
 	{
-		$this->load->view('apply_ct');
+		$this->load->view('templates/header');
+		$this->load->view('templates/powered_by');
+		$this->load->view('apply/apply_ct');
+		$this->load->view('templates/footer');
 	}
 
 	public function mr()
 	{
-		$this->load->view('apply_mr');
+		$this->load->view('templates/header');
+		$this->load->view('templates/powered_by');
+		$this->load->view('apply/apply_mr');
+		$this->load->view('templates/footer');
 	}
 }

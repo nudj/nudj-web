@@ -50,17 +50,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'main';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-
-$route['charlottetilbury'] = 'job/ct';
 
 $route['charlottetilbury/HR17001'] = 'job/ct';
 $route['mrandmrssmith/ma17001'] = 'job/mr';
 
+$route['job/(:any)'] = 'job/index';
+
 $route['explore/charlottetilbury/HR17001'] = 'apply/ct';
 $route['explore/mrandmrssmith/ma17001'] = 'apply/mr';
 
+$route['explore/job/(:any)'] = 'apply/index';
+
 $route['success'] = 'success/index';
+
+$route['signup'] = 'signup/index';
+$route['signin'] = 'login/index';
+$route['signin/google_auth'] = 'login/google_auth';
+$route['signin/linkedin_auth'] = 'login/linkedin_auth';
+
+//$route['signin/(:any)'] = 'login/index/$1';
+
+$route['dashboard'] = 'profile/index';
+$route['logout'] = 'profile/logout';
+
+
+$route['add-job'] = 'addjob/index';
+$route['add-job/create-job'] = 'addjob/createJob';
+
+
+$route['dashboard'] = 'dashboard/index';
+$route['logout'] = 'dashboard/logout';
+
+$route['profile'] = 'profile/index';
 

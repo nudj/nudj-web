@@ -1,9 +1,8 @@
-<?php include(dirname(__FILE__) .'/_helpers/header.php'); ?>
 
+<!-- CONTENT  -->
 
+    <p>Testing stuff we do.</p>
 
+<br/><br/>
 
-
-
-
-<?php include(dirname(__FILE__) .'/_helpers/footer.php'); ?>
+<?php echo $title; ?>

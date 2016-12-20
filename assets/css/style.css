@@ -39,6 +39,12 @@ body {
   margin: 0px;
 }
 
+a {
+  text-decoration: none;
+  color: var(--green);
+  font-weight:normal; 
+}
+
 /************** MENU ************/
 
 .menu {
@@ -78,7 +84,7 @@ body {
 }
 
 .menu .menu-options .menu-green-button {
-  background-color: var(--green-color);
+  background-color: var(--green);
   border-radius: 12px;
   border-width: 0;
   color: #fff;
@@ -174,7 +180,7 @@ body {
 
 .home-section-button {
   font-family: 'Gotham Rounded Book';
-  background-color: var(--green-color);
+  background-color: var(--green);
   border-radius: 18px;
   border-width: 0;
   color: #fff;
@@ -257,7 +263,7 @@ body {
 
 .home-section5-button {
   font-family: 'Gotham Rounded Book';
-  background-color: var(--green-color);
+  background-color: var(--green);
   border-radius: 18px;
   border-width: 0;
   color: #fff;
@@ -391,7 +397,7 @@ body {
   width: 100%;
   margin: auto;
   text-align: center;
-  color: var(--green-color);
+  color: var(--green);
   font-family: Avenir;
   font-size: 80px;
 }
@@ -460,4 +466,27 @@ body {
 
 .padding-top15-bottom25 {
   padding: 15px 0 25px;
+}
+
+/* ERROR */
+.error {
+  color: #ff0000;
+  font-family: Avenir;
+  font-size: 11px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.left-side {
+  float: left;
+}
+
+.right-side {
+  float: right;
+}
+
+.clear-both {
+  clear: both;
 }

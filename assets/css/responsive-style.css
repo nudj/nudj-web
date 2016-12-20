@@ -206,4 +206,72 @@
     text-align: center;
   }
 
+  .signup-box {
+    width: 90% !important;
+    margin-top:0 !important;
+    top: 40px !important;
+    padding-bottom: 100px !important;
+  }
+
+  .signin-box {
+    width: 90% !important;
+    margin-top:0 !important;
+    top: 40px !important;
+    padding-bottom: 100px !important;
+  }
+
+  .form-add-job .float-left, .form-add-job .float-right {
+    float:none;
+    width: 100%;
+  }
+
+  .form-add-job .float-left .input-job, .form-add-job .float-right .input-job{
+    width: 89%;
+  }
+
+  .footer-dashboard {
+    height: 130px;
+  }
+
+  .footer-dashboard .left-side {
+    float:none;
+    text-align: center;
+  }
+
+  .footer-dashboard .right-side {
+    float:none;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .dashboard-content {
+    padding-bottom: 170px;
+  }
+
+  .dashboard-content .tile {
+    float:none;
+    margin-left:auto;
+    margin-right: auto;
+  }
+
+  #input-add-skill { 
+    width: 78%;
+  }
+
+  #input-add-preferences {
+    width: 78%;
+  }
+
+  .active-job-container {
+    padding:15px 20px;
+    width: 87%;
+  }
+
+  .button-options {
+    padding: 6px;
+  }
+
+  .dashboard-content .content {
+    padding: 120px 25px 0 25px;
+  }
 }

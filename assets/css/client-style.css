@@ -116,6 +116,7 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-top: 10px;
+  margin-bottom:20px;
 }
 
 .client-location {
@@ -126,8 +127,28 @@
   text-transform: uppercase;
 }
 
+.referral-bonus-client {
+  font-family: AvenirNextLight;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.referral-bonus-client span {
+  font-family: Avenir;
+  font-weight: bold;
+}
+
+.client-salary {
+  font-family: Avenir;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 .apply-container {
-  margin-top: 25px;
+  margin-top: 23px;
 }
 
 .apply-container .apply-button {
@@ -145,7 +166,7 @@
 }
 
 .apply-container .apply-button2 {
-  background-color: var(--green-color);
+  background-color: var(--green);
   border-radius: 16px;
   color: #fff;
   text-transform: uppercase;
@@ -157,7 +178,7 @@
 }
 
 .apply-container .copy-button {
-  background-color: var(--green-color);
+  background-color: var(--green);
   border-radius: 16px;
   color: #fff;
   text-transform: uppercase;
@@ -198,7 +219,7 @@
 }
 
 .client-header .find-more {
-  margin-left: -55px;
+  /*margin-left: -55px;*/
   margin-bottom: 20px;
 }
 
@@ -225,7 +246,7 @@
 .client-section1 {
   width:70%;
   margin:auto;
-  padding-top:150px;
+  padding-top:100px;
   margin-bottom: 50px;
 }
 
@@ -272,7 +293,7 @@
 
 .client-section-button {
   font-family: 'Gotham Rounded Book';
-  background-color:  var(--green-color);
+  background-color:  var(--green);
   border-radius: 18px;
   border-width: 0;
   color: #fff;
@@ -287,6 +308,10 @@
 .client-section-button-container {
   width: 156px;
   margin: 24px auto auto;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 /*     CLIENT - SECTION 2     */
@@ -405,7 +430,7 @@
 }
 
 .apply-button2B {
-  background-color: var(--green-color);
+  background-color: var(--green);
   border-radius: 16px;
   color: #fff;
   text-transform: uppercase;
@@ -417,7 +442,7 @@
 }
 
 .copy-buttonB {
-  background-color: var(--green-color);
+  background-color: var(--green);
   border-radius: 16px;
   color: #fff;
   text-transform: uppercase;
@@ -432,3 +457,36 @@
   margin-left: -117px;
   display: none;
 }
+
+
+/*    POPUP REFERRAL      */
+
+.popup-referral {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  z-index: 999;
+  opacity: 0.85;
+  display: none;
+}
+
+.referral-box {
+  width: 500px;
+  height: 400px;
+  position: absolute;
+  z-index: 1000;
+  background: white;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -250px;
+  box-shadow: 2px 2px 50px #D6D6D6;
+  border-radius: 8px;
+  display: none;
+}
+
+
+
