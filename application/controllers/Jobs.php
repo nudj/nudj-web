@@ -12,6 +12,8 @@ class Jobs extends CI_Controller {
 	public function index()
 	{
 
+		show_404();
+
 		$this->load->model('user_model');
 		$this->load->model('job_model');
 

@@ -20,7 +20,7 @@
 
 					<div class="right-side padding-top22">
 						<button class="button-options" onclick="window.location.href=\''.base_url().'job/'.$job['job_code'].'\'" type="button">View</button>
-						<button class="button-options" type="button">Candidates</button>
+						<button class="button-options" onclick="window.location.href=\''.base_url().'candidates/'.$job['job_code'].'\'"  type="button">Candidates</button>
 						<button class="button-options" type="button">Manage</button>
 					</div>
 

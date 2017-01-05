@@ -18,9 +18,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href=<?php echo asset_url()."css/style.css"; ?>>
     <link rel="stylesheet" href=<?php echo asset_url()."css/dashboard-style.css"; ?>>
     <link rel="stylesheet" href=<?php echo asset_url()."css/addjob-style.css"; ?>>
+    <link rel="stylesheet" href=<?php echo asset_url()."css/candidates-style.css"; ?>>
     <link rel="stylesheet" href=<?php echo asset_url()."css/jobs-style.css"; ?>>
     <link rel="stylesheet" href=<?php echo asset_url()."css/profile-style.css"; ?>>
-    <link rel="stylesheet" href=<?php echo asset_url()."css/client-style.css";?>>
+    <link rel="stylesheet" href=<?php echo asset_url()."css/job-style.css";?>>
     <link rel="stylesheet" href=<?php echo asset_url()."css/apply-style.css";?>>
     <link rel="stylesheet" href=<?php echo asset_url()."css/responsive-style.css";?>>
     <link rel="stylesheet" href=<?php echo asset_url()."css/login-style.css";?>>

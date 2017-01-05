@@ -10,6 +10,8 @@ class Login extends CI_Controller {
 
 	public function index($signin = "")
 	{
+		show_404();
+		
 		$this->load->model('user_model');
 
 		$this->load->helper('form');

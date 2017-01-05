@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Dashboard extends CI_Controller {
+class Candidates extends CI_Controller {
 
 	
 	public function __construct()
@@ -15,6 +15,8 @@ class Dashboard extends CI_Controller {
 		show_404();
 
 		$this->load->model('user_model');
+		$this->load->model('application_model');
+		$this->load->model('job_model');
 
     	$isLoggedIn = $this->user_model->userLoggedIn();
 
@@ -37,18 +39,25 @@ class Dashboard extends CI_Controller {
 		if(strlen($this->session->userdata('firstname')) > 0) {
 			$data['firstname'] = $this->session->userdata('firstname');
 		}
- 
+
+		$job_id =  $this->uri->segment(2);
+
+		if(!isset($job_id)) {
+    		show_404();
+    	}
+
+		$jobDetails = $this->job_model->fetchJobDetails($job_id);
+
+		$data['job_title'] = $jobDetails['title_job'];
+		$data['job_id'] = $job_id;
+
+		$candidates = $this->application_model->fetchCandidatesCurrentJob($job_id);
+
+		$data['candidates'] = $candidates;
+
 		$this->load->view('templates/header');
 		$this->load->view('templates/menu_dashboard', $data);
-		$this->load->view('dashboard/dashboard_view', $data);
-		$this->load->view('templates/footer_dashboard', $data);
-	}
-
-	public function logout() {
-		$this->load->model('user_model');
-
-		$this->user_model->logout();
-
-		redirect(base_url('signin'));
+		$this->load->view('candidates/candidates_view', $data);
+		$this->load->view('templates/footer_candidates', $data);
 	}
 }

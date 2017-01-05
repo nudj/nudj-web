@@ -12,6 +12,8 @@ class Profile extends CI_Controller {
 	public function index()
 	{
 
+		show_404();
+
 		$this->load->model('user_model');
 
     	$isLoggedIn = $this->user_model->userLoggedIn();

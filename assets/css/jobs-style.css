@@ -30,6 +30,10 @@
 	font-size: 14px;
 }
 
+.grey-subtitle b {
+	color:#000;
+}
+
 .button-options {
 	font-family: Avenir;
 	font-size: 16px;

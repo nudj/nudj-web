@@ -2,8 +2,6 @@
 
 
 
-
-
   <!-- CONTENT  -->
   <div class="client-header">
     <div class="client-information2">
@@ -19,7 +17,15 @@
           }
       ?>
       <div class="apply-container">
-        <button class="apply-button" onclick=<?php echo "window.location.href='".base_url()."explore/job/".$job['job_code']."'";?> type="button">APPLY</button>
+
+      <?php 
+        $applyURL = base_url()."explore/job/".$job['job_code'];
+        if(isset($referred_from)) {
+          $applyURL = $applyURL."/referral/".$referred_from;
+        }
+      ?>
+
+        <button class="apply-button" onclick=<?php echo "window.location.href='".$applyURL."'";?> type="button">APPLY</button>
         <button class="apply-button2" id="nudj-button" type="button">Nudj TO A FRIEND</button>
         <button class="copy-button" data-clipboard-text=<?php echo current_url();?> id="copy-button" type="button">COPY LINK TO CLIPBOARD</button>
         <div class="addthis_inline_share_toolbox"></div>
@@ -125,7 +131,7 @@
   <div class = "client-section5">
     <p class="client-section-title">SO WHAT ARE YOU WAITING FOR</p>
     <div class="client-section-button-containerB">
-      <button class="apply-buttonB" onclick=<?php echo "window.location.href='".base_url()."explore/job/".$job['job_code']."'";?> type="button">APPLY</button>
+      <button class="apply-buttonB" onclick=<?php echo "window.location.href='".$applyURL."'";?> type="button">APPLY</button>
       <button class="apply-button2B" id="nudj-buttonB" type="button">Nudj TO A FRIEND</button>
         <button class="copy-buttonB" data-clipboard-text=<?php echo current_url();?> id="copy-buttonB" type="button">COPY LINK TO CLIPBOARD</button>
         <div class="addthis_inline_share_toolbox margin-left33"></div>
@@ -144,10 +150,34 @@
 
 
 <div class="popup-referral">
+
 </div>
 
 <div class="referral-box">
-    
+    <div class="referral-title">Nudj to a friend</div>
+    <form id="form-ref" class="referral-form">
+      <?php if(isset($referred_from)) {
+        echo '<input type="hidden" value="'.$referred_from.'" name="referred-from" >';
+      }
+      ?>
+      <input type="hidden" value=<?php echo $job['job_code'];?> name="job-id" >
+      <label>Name</label>
+      <br/><input class="referral-input" type="text" placeholder="Enter your full name" name="name-referral">
+      <br/><label>E-mail Address</label>
+      <br/><input class="referral-input" type="text" placeholder="Enter your E-mail Address" name="email-referral">
+      <br/><label>Relationship to referee (optional)</label>
+      <div class="referral-input" id="relationship-referral">What's your relationship to the person you're referring</div>
+      <div id="relationship-options">
+        <ul>
+          <li>Friend</li>
+          <li>Family</li>
+          <li>Colleague</li>
+        </ul>
+      </div>
+
+      <br/><input class="referral-submit" type="submit" value="Get Custom Nudj Link" name="submit-referral">
+      <div class="referral-url"></div>
+    </form>
 </div>
 
 
@@ -156,6 +186,83 @@
 
     $( document ).ready(function() {
         console.log( "ready!" );
+
+        // $(document).on('click', function (e) {
+        //   if ($(e.target).closest("#relationship-options").length === 0 ) {
+        //       $("#relationship-options").slideUp();
+        //   }
+        // }
+
+        $("#relationship-options ul li").click(function(e) {
+
+          $("#relationship-options").slideUp();
+          var text = $(this).text();
+
+          $("#relationship-referral").text(text);
+          $("#relationship-referral").css('color', '#000');
+
+        });
+
+
+        $("#relationship-referral").click(function(e) {
+
+          if($("#relationship-options").css('display') == 'none') {
+            $('#relationship-options').width( $("#skills").width() );
+            $('#relationship-options').slideDown();
+          } else {
+            $("#relationship-options").slideUp();
+          }
+        });
+
+
+        $( "#form-ref" ).submit(function( event ) {
+          //alert( "Handler for .submit() called." );
+          event.preventDefault();
+          //console.log('dsffdgssd');
+
+          $('input[type="submit"]').attr('disabled','disabled');
+          
+          var subfolder = "";
+          var base_url = document.location.origin;
+          if(base_url.includes("carmen")) {
+            subfolder = "/nudj-php";
+          } else if(base_url.includes("zudent")){
+            subfolder = "/dev.nudj";
+          }
+
+          var referred_from = "";
+
+          var name = $('[name="name-referral"]').val();
+          var email = $('[name="email-referral"]').val();
+          var relationship = $('#relationship-referral').text();
+
+          if(relationship != 'Friend' && relationship != 'Colleague' && relationship != 'Family') {
+            relationship = "";
+          }
+
+          console.log("rel " + relationship);
+
+          var job_id = $('[name="job-id"]').val();
+          
+          if($('[name="referred-from"]').length) {
+            referred_from = $('[name="referred-from"]').val();
+          }
+
+          var url = base_url + subfolder + "/job/create-referral";//window.location + "job/create-referral";
+          var redirect = window.location + "/add-job";
+
+          var result_url = base_url + subfolder + "/job/" + job_id + "/referral/";
+
+          $.ajax({
+            type: 'POST',
+            url: url, //this should be url to your PHP file 
+            dataType: 'html',
+            data: { 'name':name, 'email': email, 'relationship':relationship, 'referred_from': referred_from, 'job_id':job_id},
+            complete: function() { console.log("complete?");},
+            success: function(stream) { $('.referral-submit').hide(); $('.referral-url').show();   $('.referral-url').append(result_url+stream); }//window.location.href=window.location.href;}//$(location).attr('href', redirect);}
+          });
+      });
+
 
        $('#find-more2').click(function(){
          $('html,body').animate({
@@ -171,21 +278,37 @@
       new Clipboard('#copy-button');
 
       $('#nudj-button').click(function(){
-        $('#copy-button').fadeIn();
+
+        $('.referral-box').show(600);
+        $('.popup-referral').show(600);
+        $('body').addClass('stop-scrolling');
+
+        //$('#copy-button').fadeIn();
       });
 
       $('#copy-button').click(function(){
-        $('#copy-button').fadeOut();
+        //$('#copy-button').fadeOut();
       });
 
       new Clipboard('#copy-buttonB');
 
       $('#nudj-buttonB').click(function(){
-        $('#copy-buttonB').fadeIn();
+
+        $('.referral-box').show();
+        $('.popup-referral').show();
+        $('body').addClass('stop-scrolling');
+
+        //$('#copy-buttonB').fadeIn();
+      });
+
+      $('.popup-referral').click(function(){
+        $('.referral-box').hide(600);
+        $('.popup-referral').hide(600);
+        $('body').removeClass('stop-scrolling')
       });
 
       $('#copy-buttonB').click(function(){
-        $('#copy-buttonB').fadeOut();
+        //$('#copy-buttonB').fadeOut();
       });
 });
 </script>

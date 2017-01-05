@@ -70,6 +70,40 @@ Class Mlabapi {
 		return $result;
 	}
 
+	public function fetchApplication($collection, $data, $optional_limit = NULL) {
+
+		$database = 'nudjdev-db';
+    	$api = 'qVYE6-toZLjN3OKwl6cP-j3hoL5DSXMH';
+    	$url = 'https://api.mlab.com/api/1/databases/nudjdev-db/collections/';
+
+
+    	if($optional_limit != NULL) {
+    		$url = $url.$collection.'?q={"job_id":"'.$data['job_id'].'"}&l='.$optional_limit.'&apiKey='.$api;
+    	} else {
+    		$url = $url.$collection.'?q={"job_id":"'.$data['job_id'].'"}&apiKey='.$api;
+    	}
+
+		$result = json_decode(file_get_contents($url),true);
+		return $result;
+	}
+
+	public function fetchReferral($collection, $data, $optional_limit = NULL) {
+
+		$database = 'nudjdev-db';
+    	$api = 'qVYE6-toZLjN3OKwl6cP-j3hoL5DSXMH';
+    	$url = 'https://api.mlab.com/api/1/databases/nudjdev-db/collections/';
+
+
+    	if($optional_limit != NULL) {
+    		$url = $url.$collection.'?q={"referral_id":"'.$data['referral_id'].'"}&l='.$optional_limit.'&apiKey='.$api;
+    	} else {
+    		$url = $url.$collection.'?q={"referral_id":"'.$data['referral_id'].'"}&apiKey='.$api;
+    	}
+
+		$result = json_decode(file_get_contents($url),true);
+		return $result;
+	}
+
 	public function update($collection, $data) {
 		
 	}

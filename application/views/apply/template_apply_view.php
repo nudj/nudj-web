@@ -1,164 +1,5 @@
 
 
-<?php
-  error_reporting(E_ERROR);
-  /* ==========================  Define variables ========================== */
-
-  #Your e-mail address
-  define("__TO__", "carmenelena.albu@gmail.com");
-
-  #Message subject
-  define("__SUBJECT__", "Support - Contact");
-
-  #Success message
-  define('__SUCCESS_MESSAGE__', "Your message has been sent. Thank you!");
-
-  #Error message
-  define('__ERROR_MESSAGE__', "Error, your message hasn't been sent");
-
-  #Messege when one or more fields are empty
-  define('__MESSAGE_EMPTY_FILDS__', "Please fill out  all fields");
-
-  /* ========================  End Define variables ======================== */
-
-  //Send mail function
-  function send_mail($to,$subject,$message,$headers){
-    if(@mail($to,$subject,$message,$headers)){
-      
-      
-      //echo json_encode(array('info' => 'success', 'msg' => __SUCCESS_MESSAGE__));
-    } else {
-      header("Location: ".base_url()."success");
-      exit;
-      //echo json_encode(array('info' => 'error', 'msg' => __ERROR_MESSAGE__));
-    }
-  }
-
-  //Check e-mail validation
-  function check_email($email){
-    if(!@eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$", $email)){
-      return false;
-    } else {
-      return true;
-    }
-  }
-
-  //Get post data
-  if(isset($_POST['name']) and isset($_POST['email']) and isset($_POST['linkedin'])){
-    $name    = $_POST['name'];
-    $mail    = $_POST['email'];
-    $comment = $_POST['linkedin'];
-
-    // if($name == '') {
-    //   //echo json_encode(array('info' => 'error', 'msg' => "Please enter your name."));
-    //   //exit();
-    // } else if($mail == '' or check_email($mail) == false){
-    //   //echo json_encode(array('info' => 'error', 'msg' => "Please enter valid e-mail."));
-    //   //exit();
-    // } else if($comment == ''){
-    //   //echo json_encode(array('info' => 'error', 'msg' => "Please enter your Linkedin."));
-    //   //exit();
-    // } else {
-      //Send Mail
-      $to = __TO__;
-      $subject = __SUBJECT__ . ' ' . $name;
-      $messageC = '
-      <html>
-      <head>
-        <title>Mail from '. $name .'</title>
-      </head>
-      <body>
-      <br/>
-        <table style="width: 600px; font-family: arial; font-size: 14px;border:1px solid #999;" border="0">
-        <tr style="height: 50px;">
-          <th align="right" style="width:150px; padding-right:15px;border:1px solid #999;">Name:</th>
-          <td align="left" style="padding-left:15px; line-height: 20px;border:1px solid #999;">'. $name .'</td>
-        </tr>
-        <tr style="height: 50px;">
-          <th align="right" style="width:150px; padding-right:15px;border:1px solid #999;">E-mail:</th>
-          <td align="left" style="padding-left:15px; line-height: 20px;border:1px solid #999;">'. $mail .'</td>
-        </tr>
-        <tr style="height: 50px;">
-          <th align="right" style="width:150px; padding-right:15px;border:1px solid #999;">Linkedin:</th>
-          <td align="left" style="padding-left:15px; line-height: 20px;border:1px solid #999;">'. $comment .'</td>
-        </tr>
-        <tr style="height: 50px;">
-          <th align="right" style="width:150px; padding-right:15px;border:1px solid #999;">Job URL:</th>
-          <td align="left" style="padding-left:15px; line-height: 20px;border:1px solid #999;">'.base_url().'job/'.$job['job_code'] .'</td>
-        </tr>
-        </table>
-        <br/><br/><br/>
-      </body>
-      </html>
-      ';
-
-
-
-
-      //The form has been submitted, prep a nice thank you message
-        $output = '<h1>Thanks for your file and message!</h1>';
-        //Set the form flag to no display (cheap way!)
-        $flags = 'style="display:none;"';
-
-        //Deal with the email
-        $to = 'robyn@nudj.co';//'carmenelena.albu@gmail.com';//
-        $subject = 'Application - Nudj';
-
-        $message = $messageC;
-        $attachment = chunk_split(base64_encode(file_get_contents($_FILES['file']['tmp_name'])));
-        $filename = $_FILES['file']['name'];
-
-        $boundary =md5(date('r', time()));
-
-        $headers = "From: webmaster@nudj.co\r\nReply-To: webmaster@nudj.co";
-        $headers .= "\r\nMIME-Version: 1.0\r\nContent-Type: multipart/mixed; boundary=\"_1_$boundary\"";
-
-        $message="This is a multi-part message in MIME format.
-
---_1_$boundary
-Content-Type: multipart/alternative; boundary=\"_2_$boundary\"
-
---_2_$boundary
-Content-Type: text/html; charset=\"iso-8859-1\"
-Content-Transfer-Encoding: 7bit
-
-$message
-
---_2_$boundary--
---_1_$boundary
-Content-Type: application/octet-stream; name=\"$filename\"
-Content-Transfer-Encoding: base64
-Content-Disposition: attachment
-
-$attachment
---_1_$boundary--";
-
-        mail($to, $subject, $message, $headers);
-
-        header("Location: ".base_url()."success");
-
-      //$url='http://nudj.co/success';
-      //echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
-
-      exit;
-
-
-
-
-    //  $headers  = 'MIME-Version: 1.0' . "\r\n";
-    //  $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-    //  $headers .= 'From: ' . $mail . "\r\n";
-
-      //send_mail($to,$subject,$message,$headers);
-      //$url='http://nudj.co/success';
-      //echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
-    //}
-  } else {
-    //echo json_encode(array('info' => 'error', 'msg' => __MESSAGE_EMPTY_FILDS__));
-  }
- ?>
-
-
 <!-- MENU  -->
 
     <div class="poweredby">
@@ -187,6 +28,11 @@ $attachment
   <div>
     <form class="contaform" id="heroForm" action="" method="post" enctype="multipart/form-data">
       <div class="nudj-form">
+        <?php if(isset($referred_from)) {
+          echo '<input type="hidden" value="'.$referred_from.'" name="referred_from" >';
+        }
+        ?>
+        <input type="hidden" value=<?php echo $job['job_code'];?> name="job_id" >
         <label class="form-label">NAME</label><br/>
         <input class="input-field" type="text" placeholder="Jane Smith"
         name="name"/>
@@ -208,4 +54,69 @@ $attachment
       </div>
     </form>
   </div>
+
+
+
+<script type="text/javascript">
+
+    $( document ).ready(function() {
+        console.log( "ready!" );
+
+
+        $( "#heroForm" ).submit(function( event ) {
+          //alert( "Handler for .submit() called." );
+          event.preventDefault();
+          //console.log('dsffdgssd');
+
+          $('input[type="submit"]').attr('disabled','disabled');
+          
+          var subfolder = "";
+          var base_url = document.location.origin;
+          if(base_url.includes("carmen")) {
+            subfolder = "/nudj-php";
+          } else if(base_url.includes("zudent")){
+            subfolder = "/dev.nudj";
+          }
+
+          // var referred_from = "";
+
+          // var name = $('[name="name"]').val();
+          // var email = $('[name="email"]').val();
+          // var linkedin = $('[name="linkedin"]').val();
+          // var job_id = $('[name="job-id"]').val();
+          
+          // if($('[name="referred-from"]').length) {
+          //   referred_from = $('[name="referred-from"]').val();
+          // }
+
+          //console.log(referred_from + " are?");
+
+          // var pathArray = window.location.pathname.split( '/' );
+          // var count = pathArray.length;
+          // var job_id = pathArray[count - 1];
+          //console.log('path ' + pathArray[count - 1]);
+
+          var url = base_url + subfolder + "/apply/applyJobEmail";
+          var redirect = base_url + subfolder + "/success";
+
+          var formData = new FormData($(this)[0]);
+          //formData.append( 'linkedin', linkedin);
+          //console.log("WHAT? " + formData);
+
+          $.ajax({
+            type: 'POST',
+            url: url, //this should be url to your PHP file 
+            dataType: 'html',
+            enctype: 'multipart/form-data',
+            processData: false,
+            contentType: false,
+            cache: false,
+            data: formData,
+            complete: function() { console.log("complete?");},
+            success: function() { window.location.href=redirect;}//$(location).attr('href', redirect);}
+          });
+      });
+});
+</script>
+
 

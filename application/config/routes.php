@@ -56,13 +56,22 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['charlottetilbury/HR17001'] = 'job/ct';
 $route['mrandmrssmith/ma17001'] = 'job/mr';
+$route['cefinn/ma17001'] = 'job/cefinn_ecom';
+$route['cefinn/ma17002'] = 'job/cefinn_finan';
 
+$route['job/create-referral'] = 'job/create_referral';
 $route['job/(:any)'] = 'job/index';
+$route['job/(:any)/referral/(:any)'] = 'job/index';
+
+$route['candidates/(:any)'] = 'candidates/index';
 
 $route['explore/charlottetilbury/HR17001'] = 'apply/ct';
 $route['explore/mrandmrssmith/ma17001'] = 'apply/mr';
+$route['explore/cefinn/ma17001'] = 'apply/cef_man';
+$route['explore/cefinn/ma17002'] = 'apply/cef_fin';
 
 $route['explore/job/(:any)'] = 'apply/index';
+$route['explore/job/(:any)/referral/(:any)'] = 'apply/index';
 
 $route['success'] = 'success/index';
 
@@ -76,10 +85,8 @@ $route['signin/linkedin_auth'] = 'login/linkedin_auth';
 $route['dashboard'] = 'profile/index';
 $route['logout'] = 'profile/logout';
 
-
 $route['add-job'] = 'addjob/index';
 $route['add-job/create-job'] = 'addjob/createJob';
-
 
 $route['dashboard'] = 'dashboard/index';
 $route['logout'] = 'dashboard/logout';

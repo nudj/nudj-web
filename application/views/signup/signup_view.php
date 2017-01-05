@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>-->
 
     <link rel="stylesheet" href=<?php echo asset_url()."css/style.css"; ?>>
-    <link rel="stylesheet" href=<?php echo asset_url()."css/client-style.css";?>>
+    <link rel="stylesheet" href=<?php echo asset_url()."css/job-style.css";?>>
     <link rel="stylesheet" href=<?php echo asset_url()."css/apply-style.css";?>>
     <link rel="stylesheet" href=<?php echo asset_url()."css/responsive-style.css";?>>
     <link rel="stylesheet" href=<?php echo asset_url()."css/login-style.css";?>>

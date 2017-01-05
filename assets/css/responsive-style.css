@@ -53,6 +53,10 @@
     padding-bottom: 20px;
   }
 
+  .client-header2 .client-information3 {
+    width: 60%;
+  }
+
   .client-photo .photo1 {
       width: 48%;
     }
@@ -273,5 +277,74 @@
 
   .dashboard-content .content {
     padding: 120px 25px 0 25px;
+  }
+
+  .referral-box {
+    width: 61%;
+    top: 20px;
+    left: 20px;
+    margin:0;
+    overflow: auto;
+  }
+
+  .client-header2 .client-photo2 {
+    float: none;
+    z-index: 0;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .client-header2 .client-information3 {
+    float: none;
+    width: 80%;
+    margin-top: 74px;
+  }
+
+  .client-header2 .header-container {
+    display: block;
+    clear: both;
+    position: static;
+    height: auto;
+  }
+
+  .client-header2 {
+    display: block;
+    clear: both;
+    position: static;
+    height: auto;
+  }
+
+  .client-header2:after{
+    clear: both;
+    content: "";
+    display: block;
+}
+
+  .find-more2 {
+    display: inline;
+    position: static;
+    margin-top: 0px;
+  }
+
+  .find-more2 .arrow-down-button {
+    padding-bottom: 15px;
+  }
+
+  .fixed-footer .container-footer {
+    height: 25px;
+  }
+
+  .fixed-footer .container-footer .left-side {
+    float: none;
+    margin: 0 auto;
+    width: 145px;
+    display: none;
+  }
+
+  .fixed-footer .container-footer .right-side {
+    float: none;
+    margin: 0 auto;
+    width: 235px;
   }
 }
