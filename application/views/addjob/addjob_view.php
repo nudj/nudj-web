@@ -1,43 +1,74 @@
-<form id="form-job" method="post">
+<form id="form-job" method="post" autocomplete="on">
 
 <div class="dashboard-content padding-bottom130">
 
 	<div class="content">
 
 		<div class="form-container">
-			<!-- <?php echo form_open(''); ?> -->
 			 
 			<div class="form-add-job">
-				<?php //if( isset($error) && $error) echo '<p class="error">Incorrect credentials.</p>';?>
 				<label>Job Title</label>
-				<input  class="input-job" placeholder="Director of Engineering" name="title" type="text" value=<?php //if(isset($email)) echo $email;?> >
+				<input  class="input-job" placeholder="Director of Engineering" name="title" type="text" value="<?php if(isset($preview_job['title_job'])) echo $preview_job['title_job'];?>" >
 
 				<br/><label>Location</label>
-				<input id="autocomplete" onFocus="geolocate()" class="input-job" placeholder="Shoreditch, London, United Kingdom" name="location" type="text" >
+				<input id="autocomplete" onFocus="geolocate()" class="input-job" placeholder="Shoreditch, London, United Kingdom" name="location" type="text" value="<?php if(isset($preview_job['location_job'])) echo $preview_job['location_job'];?>" >
 				
 				<br/><label>Brief Description</label>
-				<input  class="input-job" placeholder="One line, tell us what you’re looking for" name="brief" type="text" >
+				<input  class="input-job" placeholder="We are looking for superstar to join our small but growing team." name="brief" type="text"  value="<?php if(isset($preview_job['brief'])) echo $preview_job['brief'];?>" >
 				<br/><label>Job Description</label>
-				<textarea class="textarea-job" cols="40" rows="10" 
-				name="description" type="text" ></textarea>
+				<textarea class="textarea-job" cols="40" rows="10" name="description" type="text" ><?php if(isset($preview_job['description_job'])) echo $preview_job['description_job'];?></textarea>
 
-				<div class="div-job" id="skills" class="drop-down-list">Necessary Skills &amp; Requirements <span>(optional)</span> <span id="close-skills" class="close">x</span></div>
+				<div class="div-job" id="skills" class="drop-down-list">What you'll be doing <span>(optional)</span> <span id="close-skills" class="close">x</span></div>
 				<div class="div-job-container" id="skills-container">
 					<div class="stick-to-top">
 						<input id="input-add-skill" placeholder="Team management skill">
 						<button id="button-add-skill" type="button">Add</button>
 					</div>
 					<ul id="list-skills">
+
+						<?php
+
+							if(isset($preview_job['skills'])) {
+								$skills[] = json_decode($preview_job['skills']);
+								//print_r($preview_job['skills']);
+								//print_r($skills);
+								if(count($skills) >= 1) {
+									$arr = $skills[0];
+									//print_r($arr);
+									foreach( $arr as $skill) {
+										echo '<li><button type="button" class="remove-item" >x</button><span class="value">'.$skill.'</span></li>';
+									}
+								}
+							}
+								// COMPLETE AICI Fkndlkgf dsdfhg
+						?>
+
 					</ul>
 				</div>				
 
-				<div class="div-job" id="preferences" class="drop-down-list">Candidates Preferences <span>(optional)</span> <span id="close-preferences" class="close">x</span></div>
+				<div class="div-job" id="preferences" class="drop-down-list">Skills and requirements <span>(optional)</span> <span id="close-preferences" class="close">x</span></div>
 				<div class="div-job-container" id="preferences-container">
 					<div class="stick-to-top">
 						<input id="input-add-preferences" placeholder="Team player? .. ">
 						<button id="button-add-preferences" type="button">Add</button>
 					</div>
 					<ul id="list-preferences">
+						<?php
+
+							if(isset($preview_job['preferences'])) {
+								$preferences[] = json_decode($preview_job['preferences']);
+								//print_r($preview_job['skills']);
+								//print_r($skills);
+								if(count($preferences) >= 1) {
+									$arr = $preferences[0];
+									//print_r($arr);
+									foreach( $arr as $preference) {
+										echo '<li><button type="button" class="remove-item" >x</button><span class="value">'.$preference.'</span></li>';
+									}
+								}
+							}
+								// COMPLETE AICI Fkndlkgf dsdfhg
+						?>
 					</ul>
 				</div>	
 
@@ -45,14 +76,14 @@
 				<div class="clear"></div>
 				<div class="float-left">
 					<label>Salary</label>
-					<input class="input-job" placeholder="£150,000" name="salary" type="text">
+					<input class="input-job" placeholder="£150,000" name="salary" type="text" value=<?php if(isset($preview_job['salary'])) echo $preview_job['salary'];?> >
 				</div>
 				<div class="float-right">
 					<label>Referral Bonus</label>
-					<input class="input-job" placeholder="£4,500" name="referral_bonus" type="text">
+					<input class="input-job" placeholder="£4,500" name="referral_bonus" type="text"  value=<?php if(isset($preview_job['referral_bonus'])) echo $preview_job['referral_bonus'];?>>
 				</div>
 				<div class="clear"></div>
-				<p class="info">Lorem ipsum dolor sit amet, sit amet, consectetur adipiscing elit, sed do eiusmod tempor , sed do eiusmod tempor in incididunt ut labore et dolore magna aliqua.  </p>
+				<p class="info">Nearly there. The job looks great. Now it's time to ask for a referral. Your employees, friends and nudj network are ready to help.</p>
 				<!--<input class="submit-job" value="Lorem Ipsum" name="submit" type="submit" >-->
 				<!-- <button id="submit" class="submit-job" type="buttton" >Lorem Ipsum</button> -->
 			</div>
@@ -73,9 +104,9 @@
         <a href=<?php echo base_url()."dashboard" ?>>Back to Dashboard</a>
       </div>
       <div class="right-side">
-      	<input class="green-button" value="Post Job" name="submit" type="submit" >
+      	<input class="green-button" value="Post Job" id="post-job" name="submit" type="submit" >
 	<!--        <button class="green-button" id="form-add-job-submit" onclick="">Post Job</button>-->
-        <button class="grey-button" onclick="">Preview Job</button>
+        <button class="grey-button" id="preview-job" onclick=<?php echo base_url()."job/preview" ?> >Preview Job</button>
       </div>
     </div>
 </div>
@@ -142,21 +173,19 @@
 		  	console.log( "Handler for .keypress() called. " + value );
 		});
 
+		$('#preview-job').click(function( event ) {
+			
+			event.preventDefault();
 
+			$('input[type="submit"]').attr('disabled','disabled');
 
-	    $( "#form-job" ).submit(function( event ) {
-		  	//alert( "Handler for .submit() called." );
-		  	event.preventDefault();
-		  	//console.log('dsffdgssd');
-
-		  	$('input[type="submit"]').attr('disabled','disabled');
-		  	
-		  	var subfolder = "";
+			var subfolder = "";
 		    var base_url = document.location.origin;
-		    if(base_url.includes("carmen")) {
+
+		    if(base_url.includes("localhost")) { // if local environment
 		    	subfolder = "/nudj-php";
-		    } else if(base_url.includes("zudent")){
-		    	subfolder = "/dev.nudj";
+		    } else if(base_url.includes("zudent")){ // if test environment
+		    	subfolder = "/dev.nudj"; 
 		    }
 
 	          var title = $('[name="title"]').val();
@@ -172,13 +201,73 @@
 	          //list.push(item.text);
 
 	          $('#list-skills').children('li').each(function () {
-	          		skillsList.push($(this).text());
-				    //console.log($(this).text()); // "this" is the current element in the loop
+	          		skillsList.push($(this).find('span.value').text());
+				    //console.log($(this).find('span.value').text()); // "this" is the current element in the loop
 				});
 
 	          $('#list-preferences').children('li').each(function () {
-	          		preferencesList.push($(this).text());
-				    //console.log($(this).text()); // "this" is the current element in the loop
+	          		preferencesList.push($(this).find('span.value').text());
+				    //console.log($(this).find('span.value').text()); // "this" is the current element in the loop
+				});
+
+
+	          var preferences =  JSON.stringify(preferencesList);
+	          var skills = JSON.stringify(skillsList);
+
+
+	          var url = window.location + "/preview";
+	          var redirect = base_url + subfolder + "/job/preview";
+
+	          console.log('url URL ---- ' + url);
+
+	          $.ajax({
+			    type: 'POST',
+			    url: url, //this should be url to your PHP file 
+			    dataType: 'html',
+			    data: { 'brief':brief, 'preferences': preferences, 'skills':skills, 'title': title, 'description':description, 'location':location, 'salary':salary, 'referral_bonus':referral_bonus },
+			    complete: function() { console.log("complete?");},
+			    success: function() { window.location.href = redirect; }//$(location).attr('href', redirect);}
+			});
+		});
+
+
+	    $('#post-job').click(function( event ) {
+
+		  	
+		  	//alert( "Handler for .submit() called." );
+		  	event.preventDefault();
+		  	//console.log('dsffdgssd');
+
+		  	$('input[type="submit"]').attr('disabled','disabled');
+		  	
+		  	var subfolder = "";
+		    var base_url = document.location.origin;
+		    if(base_url.includes("localhost")) { // if local environment
+		    	subfolder = "/nudj-php";
+		    } else if(base_url.includes("zudent")){ // if test environment
+		    	subfolder = "/dev.nudj"; 
+		    }
+
+	          var title = $('[name="title"]').val();
+	          var description = $('[name="description"]').val();
+	          var salary = $('[name="salary"]').val();
+	          var referral_bonus = $('[name="referral_bonus"]').val();
+	          var location = $('[name="location"]').val();
+	          var brief = $('[name="brief"]').val();
+
+	          var preferencesList = [];
+	          var skillsList = [];
+
+	          //list.push(item.text);
+
+	          $('#list-skills').children('li').each(function () {
+	          		skillsList.push($(this).find('span.value').text());
+				    //console.log($(this).find('span.value').text()); // "this" is the current element in the loop
+				});
+
+	          $('#list-preferences').children('li').each(function () {
+	          		preferencesList.push($(this).find('span.value').text());
+				    //console.log($(this).find('span.value').text()); // "this" is the current element in the loop
 				});
 
 
@@ -187,7 +276,7 @@
 
 
 	          var url = window.location + "/create-job";
-	          var redirect = window.location + "/add-job";
+	          var redirect = base_url + subfolder + "/add-job/ask-for-referral/";
 
 
 	          $.ajax({
@@ -196,7 +285,7 @@
 			    dataType: 'html',
 			    data: { 'brief':brief, 'preferences': preferences, 'skills':skills, 'title': title, 'description':description, 'location':location, 'salary':salary, 'referral_bonus':referral_bonus },
 			    complete: function() { console.log("complete?");},
-			    success: function() { window.location.href=window.location.href;}//$(location).attr('href', redirect);}
+			    success: function(stream) { window.location.href = redirect + stream; }
 			});
 
 
@@ -250,7 +339,7 @@
 	    	var inputSkill = $('#input-add-skill').val();
 
 	    	if(inputSkill.length > 0) {
-	    		$("#list-skills").append('<li><button type="button" class="remove-item" >x</button>'+inputSkill+'</li>');
+	    		$("#list-skills").append('<li><button type="button" class="remove-item" >x</button><span class="value">'+inputSkill+'</span></li>');
 	    		$("#list-skills").scrollTop($("#list-skills")[0].scrollHeight);
 	    		$('#input-add-skill').val("");
 	    	} 
@@ -272,7 +361,7 @@
 	    	var inputSkill = $('#input-add-preferences').val();
 
 	    	if(inputSkill.length > 0) {
-	    		$("#list-preferences").append('<li><button type="button" class="remove-item" >x</button>'+inputSkill+'</li>');
+	    		$("#list-preferences").append('<li><button type="button" class="remove-item" >x</button><span class="value">'+inputSkill+'</span></li>');
 	    		$("#list-preferences").scrollTop($("#list-preferences")[0].scrollHeight);
 	    		$('#input-add-preferences').val("");
 	    	} 

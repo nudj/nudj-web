@@ -1,6 +1,6 @@
     <div class="menu">
       <div class="menu-dashboard">
-        <button type="button" class="menu-logo">
+        <button type="button" class="menu-logo" onclick=<?php echo "window.location.href='".base_url()."dashboard'";?>>
             <img src=<?php echo asset_url()."images/nudj-logo.png";?> />
         </button>
 

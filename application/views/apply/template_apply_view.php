@@ -16,7 +16,14 @@
 
   <div class="apply-header">
      <div class="client-logo" >
-      <img src=<?php echo asset_url()."images/logo-placeholder.jpeg";?> />
+      <?php 
+            if(isset($logo_filename)) {
+              echo '<img src="'.base_url().'uploads/'.$logo_filename.'" />';
+            } else {
+              echo '<img src="'.asset_url().'images/logo-placeholder.jpeg" />';
+            }
+        ?>
+      
     </div>
     <p class="client-job"><?php if(isset( $job['title_job'])) echo $job['title_job']; ?></p>
     <p class="client-location"><?php if(isset( $job['location'])) echo $job['location']; ?></p>
@@ -72,7 +79,7 @@
           
           var subfolder = "";
           var base_url = document.location.origin;
-          if(base_url.includes("carmen")) {
+          if(base_url.includes("localhost")) {
             subfolder = "/nudj-php";
           } else if(base_url.includes("zudent")){
             subfolder = "/dev.nudj";

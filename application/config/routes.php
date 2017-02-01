@@ -59,7 +59,10 @@ $route['mrandmrssmith/ma17001'] = 'job/mr';
 $route['cefinn/ma17001'] = 'job/cefinn_ecom';
 $route['cefinn/ma17002'] = 'job/cefinn_finan';
 
+$route['job/preview'] = 'job/preview';
+$route['job/unique-link'] = 'job/uniqueLink';
 $route['job/create-referral'] = 'job/create_referral';
+$route['job/edit/(:any)'] = 'job/edit';
 $route['job/(:any)'] = 'job/index';
 $route['job/(:any)/referral/(:any)'] = 'job/index';
 
@@ -86,6 +89,9 @@ $route['dashboard'] = 'profile/index';
 $route['logout'] = 'profile/logout';
 
 $route['add-job'] = 'addjob/index';
+$route['add-job/ask-for-referral/(:any)'] = 'addjob/askForReferral';
+$route['add-job/ask-referral-network'] = 'addjob/askForReferralEntireNetwork';
+$route['add-job/preview'] = 'addjob/goToPreview';
 $route['add-job/create-job'] = 'addjob/createJob';
 
 $route['dashboard'] = 'dashboard/index';

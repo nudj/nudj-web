@@ -26,7 +26,7 @@
 
 	    var subfolder = "";
 	    var base_url = document.location.origin;
-	    if(base_url.includes("carmen")) {
+	    if(base_url.includes("localhost")) {
 	    	subfolder = "/nudj-php";
 	    } else if(base_url.includes("zudent")){
 	    	subfolder = "/dev.nudj";

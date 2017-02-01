@@ -23,7 +23,6 @@ class Job_model extends CI_Model {
                 $skills = "";
                 $preferences = "";
                 $referral_bonus = "";
-
                 $collection = "Job";
                 $createdAt = new DateTime();
                 $updatedAt = new DateTime();
@@ -31,7 +30,7 @@ class Job_model extends CI_Model {
                 $title = $job_details['title_job'];
                 $job_code = uniqid();
                 $job_id = $job_code;
-                $brief = $brief;
+                $brief = "";
 
                 if(isset($job_details['preferences'])) {
                         $preferences = $job_details['preferences'];
@@ -54,6 +53,14 @@ class Job_model extends CI_Model {
 
                 $location = $job_details['location_job'];
 
+                $company_name = 'Company';
+                if($this->session->userdata('firstname') !== null) {
+                    $company_name = $this->session->userdata('firstname');
+                } else if($this->session->userdata('fullname') !== null) {
+                    $arr = explode(' ',trim($this->session->userdata('fullname')));
+                    $company_name = $arr[0];
+                }
+
                 $newJob = array(
                         'createdAt' => $createdAt,
                         'updatedAt' => $updatedAt,
@@ -67,12 +74,13 @@ class Job_model extends CI_Model {
                         'user_id' => $user_id,
                         'salary' => $salary,
                         'referral_bonus' => $referral_bonus,
-                        'location' => $location
+                        'location' => $location,
+                        'company_name' => $company_name
                     );
 
                 $this->mlabapi->insert($collection, $newJob);
 
-                return true;
+                return $job_id;
         }
 
         public function updateJob($job_details) {

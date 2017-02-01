@@ -9,22 +9,20 @@
       <div class="client-logo" >
         <img src=<?php echo asset_url()."images/cefinn-logo.png";?> />
       </div>
-      <p class="client-job margin-top20">ECOMMERCE MANAGER</p>
+      <p class="client-job margin-top20">FINANCE / OPERATIONS MANAGER</p>
       <p class="client-location">London, United Kingdom</p>
-      <p class="client-salary">SALARY: £30-40,000 <span><img src=<?php echo asset_url()."images/nudj-logo.png";?> /> BONUS: £500</span></p>
+      <p class="client-salary2"><span><img src=<?php echo asset_url()."images/nudj-logo.png";?> /> BONUS: £500</span></p>
       <div class="apply-container">
-        <button class="apply-button" onclick=<?php echo "window.location.href='".base_url()."explore/cefinn/ma17001'";?> type="button">APPLY</button>
+        <button class="apply-button" onclick=<?php echo "window.location.href='".base_url()."explore/cefinn/ma17002'";?> type="button">APPLY</button>
         <button class="apply-button2" id="nudj-button" type="button">Nudj TO A FRIEND</button>
         <button class="copy-button2" data-clipboard-text=<?php echo current_url();?> id="copy-button" type="button">COPY LINK TO CLIPBOARD</button>
-        <div class="addthis_inline_share_toolbox_nslb" ></div>
+        <div class="addthis_inline_share_toolbox_nslb"></div>
         <!--<button class="nudj-button" type="button">Nudj to a Friend</button>-->
       </div>
     </div>
 
     <div class="client-photo2">
-      <div class="inside-photo">
-        <img class="photo4" src=<?php echo asset_url()."images/cefinn-image.png";?> />
-      </div>
+        <img class="photo3" src=<?php echo asset_url()."images/cefinn-image.png";?> />
     </div>
 
     <div class="find-more2">
@@ -49,8 +47,10 @@
 
   <div class = "client-section2">
     <p class = "client-section-pretitle">WE'RE LOOKING FOR A</p>
-    <p class="client-section-title max-width920">a motivated and entrepreneurial ecommerce manager to
-join our exciting, London-based fashion brand, to start as soon as possible.</p>
+    <p class="client-section-title max-width920">FINANCIAL FOCUSED OPERATIONS MANAGER TO Implement
+and managE the financIAL and operationAL Processes in
+an exciting fashion design and retail start up.
+</p>
     
     <div class = "vertical-delimiter margin-top45"></div>
   </div>
@@ -60,13 +60,17 @@ join our exciting, London-based fashion brand, to start as soon as possible.</p>
 
   <div class = "client-section3">
     <p class = "client-section-pretitle">The responsibilities</p>
-    <p class="client-section-title">SALES & merchandising</p>
+    <p class="client-section-title">FINANCIAL</p>
     <ul class="client-list-description max-width530">
-        <li><p class="list-lines">Owning and implementing the eCommerce sales strategy – driving traffic and sales,     growing average spend, and improving customer experience in line with the brand positioning.</p></li>
-        <li><p class="list-lines">Analysis of the performance of channels, product placement etc. in order to recommend and implement a programme of continuous improvement resulting with increased ROI.</p></li>
-        <li><p class="list-lines">Strategy and implementation of product merchandising with oversight from the Creative Director.</p></li>
-        <li><p class="list-lines">Uploading of all new season product information and data – photography, pricing and editorial.</p></li>
-        <li><p class="list-lines">Implementation of discounts and promotions.</p></li>
+        <li><p class="list-lines">Taking ownership of the finance/book keeping function.</p></li>
+        <li><p class="list-lines">Implementing and managing suitable and appropriate finance software.</p></li>
+        <li><p class="list-lines">Maintaining relationships with key stakeholders, including the bank and investors.</p></li>
+        <li><p class="list-lines">Working closely with the company accountant and book keeper.</p></li>
+        <li><p class="list-lines">Managing precise cash flow statements – including all aspects of the business         (Sales, stock and sell through, and any capital expenditure).</p></li>
+        <li><p class="list-lines">Invoice processing, reconciling daily payments with orders and dealing with any
+  returns and charge backs.</p></li>
+        <li><p class="list-lines">Negotiating payment terms with suppliers.</p></li>
+        <li><p class="list-lines">Ensuring that the company complies with financial and trading regulations, including    all tax and regulatory bodies.</p></li>
     </ul>
     <div class = "vertical-delimiter margin-top45 margin-bottom45"></div>
 
@@ -74,56 +78,42 @@ join our exciting, London-based fashion brand, to start as soon as possible.</p>
 
     <p class="client-section-title">TECHNICAL</p>
     <ul class="client-list-description max-width530">
-        <li><p class="list-lines">General monitoring and maintenance of the web site to ensure no glitches, high speed and optimization at all times.</p></li>
-        <li><p class="list-lines">Communication with and coordination of external web developers.</p></li>
+        <li><p class="list-lines">Implementing and managing the new ERP system (BrightPearl).</p></li>
+        <li><p class="list-lines">Maintaining price books and margin management.</p></li>
+        <li><p class="list-lines">Operating an open to buy (or similar process) and ensuring that stock levels are 
+  maintained within agreed limits by the ecommerce manager.</p></li>
+        <li><p class="list-lines">Implementing and managing processes including warehousing, logistics and
+  fulfillment, including full compliance with latest Health and Safety regulations.</p></li>
+        <li><p class="list-lines">Setting and maintaining service levels for the business in order to ensure that
+  customers’ expectations are met or exceeded.</p></li>
+        <li><p class="list-lines">Customer Service.</p></li>
+        <li><p class="list-lines">Handling legal, HR, IT and insurance matters.</p></li>
+        <li><p class="list-lines">Ad hoc office management support.</p></li>
     </ul>
     <div class = "vertical-delimiter margin-top45 margin-bottom45"></div>
 
 
-    <p class="client-section-title">budget & planning</p>
+    <p class="client-section-title">Key Competencies Skills</p>
     <ul class="client-list-description max-width530">
-        <li><p class="list-lines">Plan, control and monitor the ecommerce budget in agreement with the directors of   the   company – sales, margin and costs for instance staffing, photography, marketing and technical.</p></li>
-        <li><p class="list-lines">Plan, implement and monitor the ecommerce critical path for each season.</p></li>
+        <li><p class="list-lines">Prior experience in a finance and/or operations role in a retail business.</p></li>
+        <li><p class="list-lines">Strong numerical and Excel skills (forecasting, cash flow management, business
+  accounting, pay roll, etc.)</p></li>
+        <li><p class="list-lines">Experience using ERP systems</p></li>
+        <li><p class="list-lines">Able to work under pressure and to deadlines with excellent time management skills.</p></li>
+        <li><p class="list-lines">Comfortable with change and working to a fast pace.</p></li>
+        <li><p class="list-lines">Self motivated, dedicated, hardworking and extremely organized with meticulous eye    for detail..</p></li>
+        <li><p class="list-lines">Innovative and creative with good commercial acumen.</p></li>
+        <li><p class="list-lines">An interest in retail and being part of a fast-growing brand</p></li>
+        <li><p class="list-lines">Personable, approachable and articulate.</p></li>
+        <li><p class="list-lines">Flexible, helpful, can-do attitude and a positive, focused work ethic.</p></li>
     </ul>
     <div class = "vertical-delimiter margin-top45 margin-bottom45"></div>
 
-    <p class="client-section-title">Marketing</p>
+    <p class="client-section-title">educational requirements</p>
     <ul class="client-list-description max-width530">
-        <li><p class="list-lines">Building of marketing emails.</p></li>
-        <li><p class="list-lines">Review and analyse conversion metrics in order to liaise help the team incrementally improve conversion over time.</p></li>
-        <li><p class="list-lines">Strategy and implementation of affiliate marketing program, relationship management and monitoring.</p></li>
-        <li><p class="list-lines">Work with the team to review and implement improvements to site content to help improve conversion from organic search traffic.</p></li>
+        <li><p class="list-lines">A degree level qualification in a finance related degree is essential for this role.</p></li>
     </ul>
-    <div class = "vertical-delimiter margin-top45 margin-bottom45"></div>
 
-
-
-    <p class="client-section-title">GENERAL RESPONSIBILITIES</p>
-    <ul class="client-list-description max-width530">
-        <li><p class="list-lines">Promote the image of Cefinn as a professional organisation at all times.</p></li>
-        <li><p class="list-lines">Ensure efficient collaboration and co-ordination between relevant departments.</p></li>
-        <li><p class="list-lines">Give full co-operation to any colleagues requiring assistance in a prompt and helpful     manner and to be flexible in assisting around the office in response to business needs.</p></li>
-        <li><p class="list-lines">Ensure maximum client satisfaction by responding to and anticipating client or colleague requirements in a friendly and efficient manner so providing a consistent high level of service.</p></li>
-        <li><p class="list-lines">Comply with all security and maintenance measures to ensure the protection of
-  colleagues and company property.</p></li>
-        <li><p class="list-lines">Comply with all Company policies and legal requirements with special reference to Health and Safety.</p></li>
-        <li><p class="list-lines">Other comparable duties as may be required by the Director.</p></li>
-    </ul>
-    <div class = "vertical-delimiter margin-top45 margin-bottom45"></div>
-
-
-
-    <p class="client-section-title">personal REQUIREMENTS</p>
-    <ul class="client-list-description max-width530">
-        <li><p class="list-lines">Minimum 3 Years Experience Needed</p></li>
-        <li><p class="list-lines">Professional, adaptable and calm, with ability to work well under pressure and stress.</p></li>
-        <li><p class="list-lines">Excellent at planning, organizing and prioritizing workload.</p></li>
-        <li><p class="list-lines">Excellent at time management – meeting critical deadlines.</p></li>
-        <li><p class="list-lines">Highly analytical and logical.</p></li>
-        <li><p class="list-lines">Attention to detail.</p></li>
-        <li><p class="list-lines">Highly motivated, hardworking and flexible, Comfortable with change.</p></li>
-        <li><p class="list-lines">Basical HTML Knowledge helpful</p></li>
-    </ul>
 
   </div>
 
@@ -135,7 +125,7 @@ join our exciting, London-based fashion brand, to start as soon as possible.</p>
   <div class = "client-section5">
     <p class="client-section-title">SO WHAT ARE YOU WAITING FOR</p>
     <div class="client-section-button-containerB">
-      <button class="apply-buttonB" onclick=<?php echo "window.location.href='".base_url()."explore/cefinn/ma17001'";?> type="button">APPLY</button>
+      <button class="apply-buttonB" onclick=<?php echo "window.location.href='".base_url()."explore/cefinn/ma17002'";?> type="button">APPLY</button>
       <button class="apply-button2B" id="nudj-buttonB" type="button">Nudj TO A FRIEND</button>
         <button class="copy-buttonB" data-clipboard-text=<?php echo current_url();?> id="copy-buttonB" type="button">COPY LINK TO CLIPBOARD</button>
         <div class="addthis_inline_share_toolbox_nslb margin-left60"></div>
@@ -153,7 +143,7 @@ join our exciting, London-based fashion brand, to start as soon as possible.</p>
       </div>
       <div class="right-side">
         <div class="apply-container">
-        <button class="apply-button" onclick=<?php echo "window.location.href='".base_url()."explore/cefinn/ma17001'";?> type="button">APPLY</button>
+        <button class="apply-button" onclick=<?php echo "window.location.href='".base_url()."explore/cefinn/ma17002'";?> type="button">APPLY</button>
         <button class="apply-button2" id="nudj-button3" type="button">Nudj TO A FRIEND</button>
         <button class="copy-button3" data-clipboard-text=<?php echo current_url();?> id="copy-button3" type="button">COPY LINK TO CLIPBOARD</button>
       </div>
@@ -191,6 +181,7 @@ join our exciting, London-based fashion brand, to start as soon as possible.</p>
           $("#fixed-footer").show();
             //notification.html('element is <strong>not</strong> visible');
         }
+        
     }
 
 
@@ -275,6 +266,5 @@ join our exciting, London-based fashion brand, to start as soon as possible.</p>
 
 
 <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-583eb0fd3cb92ff2"></script>
-
 
 

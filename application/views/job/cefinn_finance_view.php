@@ -22,7 +22,9 @@
     </div>
 
     <div class="client-photo2">
-        <img class="photo3" src=<?php echo asset_url()."images/cefinn-image.png";?> />
+      <div class="inside-photo">
+        <img class="photo4" src=<?php echo asset_url()."images/cefinn-image.png";?> />
+      </div>
     </div>
 
     <div class="find-more2">
@@ -47,9 +49,7 @@
 
   <div class = "client-section2">
     <p class = "client-section-pretitle">WE'RE LOOKING FOR A</p>
-    <p class="client-section-title max-width920">FINANCIAL FOCUSED OPERATIONS MANAGER TO Implement
-and managE the financIAL and operationAL Processes in
-an exciting fashion design and retail start up.
+    <p class="client-section-title max-width920">commercial individual to implement and manage the finance and operations processes in Samantha Cameron’s new fashion start-up
 </p>
     
     <div class = "vertical-delimiter margin-top45"></div>
@@ -63,10 +63,11 @@ an exciting fashion design and retail start up.
     <p class="client-section-title">FINANCIAL</p>
     <ul class="client-list-description max-width530">
         <li><p class="list-lines">Taking ownership of the finance/book keeping function.</p></li>
-        <li><p class="list-lines">Implementing and managing suitable and appropriate finance software.</p></li>
-        <li><p class="list-lines">Maintaining relationships with key stakeholders, including the bank and investors.</p></li>
+        <li><p class="list-lines">Implementing and managing appropriate finance software.</p></li>
+        <li><p class="list-lines">Maintaining relationships with key stakeholders, including our bank and investors.</p></li>
         <li><p class="list-lines">Working closely with the company accountant and book keeper.</p></li>
-        <li><p class="list-lines">Managing precise cash flow statements – including all aspects of the business         (Sales, stock and sell through, and any capital expenditure).</p></li>
+        <li><p class="list-lines">Managing precise cash flow statements and overseeing all aspects of the business (sales, stock and sell through, and any capital expenditure).</p></li>
+        <li><p class="list-lines">Maintaining price books and margin management</p></li>
         <li><p class="list-lines">Invoice processing, reconciling daily payments with orders and dealing with any
   returns and charge backs.</p></li>
         <li><p class="list-lines">Negotiating payment terms with suppliers.</p></li>
@@ -76,10 +77,9 @@ an exciting fashion design and retail start up.
 
 
 
-    <p class="client-section-title">TECHNICAL</p>
+    <p class="client-section-title">OPERATIONS</p>
     <ul class="client-list-description max-width530">
         <li><p class="list-lines">Implementing and managing the new ERP system (BrightPearl).</p></li>
-        <li><p class="list-lines">Maintaining price books and margin management.</p></li>
         <li><p class="list-lines">Operating an open to buy (or similar process) and ensuring that stock levels are 
   maintained within agreed limits by the ecommerce manager.</p></li>
         <li><p class="list-lines">Implementing and managing processes including warehousing, logistics and
@@ -93,7 +93,7 @@ an exciting fashion design and retail start up.
     <div class = "vertical-delimiter margin-top45 margin-bottom45"></div>
 
 
-    <p class="client-section-title">Key Competencies Skills</p>
+    <p class="client-section-title">Key Competencies / Skills</p>
     <ul class="client-list-description max-width530">
         <li><p class="list-lines">Prior experience in a finance and/or operations role in a retail business.</p></li>
         <li><p class="list-lines">Strong numerical and Excel skills (forecasting, cash flow management, business
@@ -101,7 +101,7 @@ an exciting fashion design and retail start up.
         <li><p class="list-lines">Experience using ERP systems</p></li>
         <li><p class="list-lines">Able to work under pressure and to deadlines with excellent time management skills.</p></li>
         <li><p class="list-lines">Comfortable with change and working to a fast pace.</p></li>
-        <li><p class="list-lines">Self motivated, dedicated, hardworking and extremely organized with meticulous eye    for detail..</p></li>
+        <li><p class="list-lines">Self motivated, dedicated, hardworking and extremely organized with meticulous eye    for detail.</p></li>
         <li><p class="list-lines">Innovative and creative with good commercial acumen.</p></li>
         <li><p class="list-lines">An interest in retail and being part of a fast-growing brand</p></li>
         <li><p class="list-lines">Personable, approachable and articulate.</p></li>
@@ -111,7 +111,7 @@ an exciting fashion design and retail start up.
 
     <p class="client-section-title">educational requirements</p>
     <ul class="client-list-description max-width530">
-        <li><p class="list-lines">A degree level qualification in a finance related degree is essential for this role.</p></li>
+        <li><p class="list-lines">Finance degree or equivalent preferable.</p></li>
     </ul>
 
 

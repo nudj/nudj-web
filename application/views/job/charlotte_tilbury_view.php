@@ -65,7 +65,7 @@
 
   <div class = "client-section3">
     <p class = "client-section-pretitle">The responsibilities</p>
-    <p class="client-section-title">Core responsabilities</p>
+    <p class="client-section-title">Core responsibilities</p>
     <ul class="client-list-description max-width530">
         <li><p class="list-lines">Architect a full talent ecosystem</p></li>
         <li><p class="list-lines">Manage organizational risk in application and implementation of all policies and

@@ -29,7 +29,7 @@
 
 			}
 		}
-
+//<button class="button-options" onclick="window.location.href=\''.base_url().'add-job/'.$job['job_code'].'\'" type="button">Edit</button>
 		?>
 		
 

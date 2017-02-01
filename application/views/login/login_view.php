@@ -33,7 +33,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 		var subfolder = "";
 	    var base_url = document.location.origin;
-	    if(base_url.includes("carmen")) {
+	    if(base_url.includes("localhost")) {
 	    	subfolder = "/nudj-php";
 	    } else if(base_url.includes("zudent")){
 	    	subfolder = "/dev.nudj";
@@ -174,7 +174,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<div class="signin-box">
 		<p class="nudj-title">Sign In</p>
-		<p class="nudj-description">Lorem ipsum dolore sit amet text here that's all I know from lorem text i choose bulbasaur lorem ipsum dolore sit amet.</p>
+		<p class="nudj-description">Get yourself back in there, you have jobs to fill.</p>
 
 		<div class="login-buttons">
 			<div id="google-button" class="customGPlusSignIn"></div>

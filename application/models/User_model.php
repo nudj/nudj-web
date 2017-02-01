@@ -44,7 +44,7 @@ class User_model extends CI_Model {
                         'fullname' => $fullname,
                         'email' => $newUser['email'],
                         'username' => $username,
-                        'location' => $newUser['location'],
+                        'company_name' => $newUser['company_name'],
                         'password_hash' => $password_hash,
                         "user_id" => uniqid(),
                         'google_auth' => false,
@@ -203,11 +203,46 @@ class User_model extends CI_Model {
             $linkedin_auth = false;
             $google_auth = false;
 
+            $company_name = "";
+            $company_website = "";
+            $company_about = "";
+            $company_about_header = "";
+            $company_cover = "";
+            $company_logo = "";
+
             //echo("<script>console.log('PHP:".$email."');</script>");
             
 
             $fullnameWithoutSpaces = preg_replace('/\s+/', '', $fullname);
             $username = $fullnameWithoutSpaces.uniqid();
+
+            if(isset($userdata['fullname'])) {
+                $fullname = $userdata['fullname'];
+            }
+
+            if(isset($userdata['company_name'])) {
+                $company_name = $userdata['company_name'];
+            }
+
+            if(isset($userdata['company_website'])) {
+                $company_website = $userdata['company_website'];
+            }
+
+            if(isset($userdata['company_about'])) {
+                $company_about = $userdata['company_about'];
+            }
+
+            if(isset($userdata['company_about_header'])) {
+                $company_about_header = $userdata['company_about_header'];
+            }
+
+            if(isset($userdata['company_cover'])) {
+                $company_cover = $userdata['company_cover'];
+            }
+
+            if(isset($userdata['company_logo'])) {
+                $company_logo = $userdata['company_logo'];
+            }
 
             if(isset($userdata['firstname'])) {
                 $firstname = $userdata['firstname'];
@@ -290,6 +325,12 @@ class User_model extends CI_Model {
             $user = array(
                         'fullname' => $fullname,
                         'email' => $email,
+                        'company_name' => $company_name,
+                        'company_about' => $company_about,
+                        'company_about_header' => $company_about_header,
+                        'company_website' => $company_website,
+                        'company_cover' => $company_cover,
+                        'company_logo' => $company_logo,
                         'username' => $username,
                         'photo_url' => $photo_url,
                         'firstname' => $firstname,
@@ -309,6 +350,16 @@ class User_model extends CI_Model {
             //return $user;
         }
 
+        public function fetchUserById ($user_id) {
+            
+            $collection = 'User';
+            
+            $result = $this->mlabapi->fetchUserById($collection, array('user_id' => $user_id));
+            $user_result = $result[0];
+
+            return $user_result;
+        }
+
         public function getCurrentUser () {
                 //return session user
 
@@ -316,6 +367,13 @@ class User_model extends CI_Model {
                 $user = array(
                         'fullname' => $this->session->userdata('fullname'),
                         'email' => $this->session->userdata('email'),
+                        'company_name' => $this->session->userdata('company_name'),
+                        'company_about' => $this->session->userdata('company_about'),
+                        'company_about_header' => $this->session->userdata('company_about_header'),
+                        'company_website' => $this->session->userdata('company_website'),
+                        'company_logo' => $this->session->userdata('company_logo'),
+                        'company_cover' => $this->session->userdata('company_cover'),
+                        'fullname' => $this->session->userdata('fullname'),
                         'username' => $this->session->userdata('username'),
                         'photo_url' => $this->session->userdata('photo_url'),
                         'firstname' => $this->session->userdata('firstname'),
@@ -345,9 +403,94 @@ class User_model extends CI_Model {
                 return false;
         }
 
-        public function updateUser() {
+        public function updateUser($user) {
 
-                //
+            //
+            $fullname = '';
+            $email = '';
+            $company_name = '';
+            $company_website = '';
+            $company_about = '';
+            $company_about_header = '';
+            $company_logo = '';
+            $company_cover = '';
+
+            if(isset($user['fullname'])) {
+                if(strlen($user['fullname']) > 0) {
+                    $fullname = $user['fullname'];
+                }
+            }
+
+            if(isset($user['email'])) {
+                if(strlen($user['email']) > 0) {
+                    $email = $user['email'];
+                }
+            }
+
+            if(isset($user['company_name'])) {
+                if(strlen($user['company_name']) > 0) {
+                    $company_name = $user['company_name'];
+                }
+            }
+
+            if(isset($user['company_website'])) {
+                if(strlen($user['company_website']) > 0) {
+                    $company_website = $user['company_website'];
+                }
+            }
+
+            if(isset($user['company_about'])) {
+                if(strlen($user['company_about']) > 0) {
+                    $company_about = $user['company_about'];
+                }
+            }
+
+            if(isset($user['company_about_header'])) {
+                if(strlen($user['company_about_header']) > 0) {
+                    $company_about_header = $user['company_about_header'];
+                }
+            }
+
+            if(isset($user['company_logo'])) {
+                if(strlen($user['company_logo']) > 0) {
+                    $company_logo = $user['company_logo'];
+                }
+            }
+
+            if(isset($user['company_cover'])) {
+                if(strlen($user['company_cover']) > 0) {
+                    $company_cover = $user['company_cover'];
+                }
+            }
+
+            $newUser = array( 'fullname'  => $fullname,
+                               'email' => $email,
+                               'company_name' => $company_name,
+                               'company_website' => $company_website,
+                               'company_about' => $company_about,
+                               'company_about_header' => $company_about_header,
+                               'company_logo' => $company_logo,
+                               'company_cover' => $company_cover);
+
+            if(strlen($company_cover) == 0) {
+                $newUser['company_cover'] = $this->session->userdata('company_cover');
+                //unset($newUser['company_cover']);
+            }
+
+            if(strlen($company_logo) == 0) {
+                $newUser['company_logo'] = $this->session->userdata('company_logo');
+            }
+
+            //print_r('sdfggfdgfdfd');
+            //print_r($newUser);
+            //die();
+
+            $collection = 'User';
+            $newUser['user_id'] = $this->session->userdata('user_id');
+
+            $result = $this->mlabapi->update($collection, $newUser);
+
+            $this->session->set_userdata($newUser);
         }
 
         public function logout() {

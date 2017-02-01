@@ -32,7 +32,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 		var subfolder = "";
 	    var base_url = document.location.origin;
-	    if(base_url.includes("carmen")) {
+	    if(base_url.includes("localhost")) {
 	    	subfolder = "/nudj-php";
 	    } else if(base_url.includes("zudent")){
 	    	subfolder = "/dev.nudj";
@@ -160,7 +160,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<div class="signup-box">
 		<p class="nudj-title">Request Access</p>
-		<p class="nudj-description">To join Nudj simply enter your company details below or Sign up with Google or Linkedin to get full access to the platform</p>
+		<p class="nudj-description">Nudj is the easiest and most effective way to hire via referrals. To try out the platform today, sign up below.</p>
 
 		<div class="login-buttons">
 			<div id="google-button" class="customGPlusSignIn"></div>
@@ -178,9 +178,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<?php echo form_open('signup'); ?>
 				<div class="form-signup">
 					<?php if( isset($errors)) echo '<p class="error">'.$errors[0].'</p>';?>
-					<input class="input-signup" placeholder="Full Name" name="fullname" type="text"  value=<?php if(isset($fullname)) echo $fullname;?> >
-					<input class="input-signup" placeholder="E-Mail" name="email" type="text"  value=<?php if(isset($email)) echo $email;?> >
-					<input class="input-signup" placeholder="Where You Live" name="location" type="text"  value=<?php if(isset($location)) echo $location;?> >
+					<input class="input-signup" placeholder="Full Name" name="fullname" type="text"  value="<?php if(isset($fullname)) echo $fullname;?>" >
+					<input class="input-signup" placeholder="E-Mail" name="email" type="text"  value="<?php if(isset($email)) echo $email;?>" >
+					<input class="input-signup" placeholder="Company Name" name="company_name" type="text"  value="<?php if(isset($company_name)) echo $company_name;?>" >
 					<input class="input-signup" placeholder="Password" name="password" type="password" >
 					<input class="input-signup" placeholder="Re-type Password" name="repassword" type="password" >
 					<input class="submit" value="Request Access" name="submit" type="submit" >

@@ -226,33 +226,71 @@
     user-select: none;
     position: relative;
     top: -2px;
-
-/*	border-radius: 14px;
-	border: 1px solid #D5DDEA;
-	padding: 0px 4px 3px;
-	margin-top: -5px;
-	color: #D5DDEA;
-	margin-right: 10px;
-	cursor: pointer;
-	font-family: AvenirNextLight;
-	-webkit-user-select: none;
-    -moz-user-select: -moz-none;
-    -ms-user-select: none;
-    user-select: none;
-    position: relative;
-	top: -1px;*/
 }
 
+.ask-referral-nudj {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 999;
+	/*display: flex;*/
+}
 
+.ask-referral-content {
+	align-self: center;
+	text-align: center;
+	font-family: Avenir;
+	font-size: 15px;
+	display: block;
+	margin: 0 auto;
+	max-width: 800px;
+	width: 85%;
+}
 
+.ask-referral-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: #F5F5F2;
+	z-index: -1;
+}
 
+.ask-referral-icon {
+	width: 100px;
+	margin-top: 60px;
+	font-family: Avenir;
+}
 
+.ask-referral-title {
+	font-size: 24px;
+	margin-bottom: 0;
+	font-family: Avenir;
+}
 
+.ask-referral-message {
+	margin-bottom: 20px;
+	opacity: 0.3;
+	font-family: Avenir;
+}
 
+.horizontal-divider {
+	width: 100%;
+	height: 1px;
+	background-color: #000;
+	opacity: 0.2;
+	margin: 20px auto;
+}
 
+.emphasize {
+	font-weight: 500;
+}
 
-
-
-
-
+#referral-link-hidden {
+	opacity: 0;
+	position: absolute;
+	z-index: -2;
+}
 

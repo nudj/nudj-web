@@ -10,7 +10,7 @@ class Signup extends CI_Controller {
 
 	public function index()
 	{
-		show_404();
+		//show_404();
 		
 		$this->load->model('user_model');
 
@@ -33,12 +33,12 @@ class Signup extends CI_Controller {
 			//array_push($stack, "apple", "raspberry");
 
 			$fullname = $this->input->post('fullname');
-			$location = $this->input->post('location');
+			$company_name = $this->input->post('company_name');
 			$email = $this->input->post('email');
 			$password = $this->input->post('password');
 			$repassword = $this->input->post('repassword');
 
-			if(strlen($fullname) <= 0 || strlen($email) <= 0 || strlen($location) <= 0 || strlen($password) <= 0 || strlen($repassword) <= 0) {
+			if(strlen($fullname) <= 0 || strlen($email) <= 0 || strlen($company_name) <= 0 || strlen($password) <= 0 || strlen($repassword) <= 0) {
 
 				array_push($errors, "All fields are required.");
 			} else if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
@@ -53,7 +53,7 @@ class Signup extends CI_Controller {
 				$newUser = array(
 			        'fullname' => $this->input->post('fullname'),
 			        'email' => $this->input->post('email'),
-			        'location' => $this->input->post('location'),
+			        'company_name' => $this->input->post('company_name'),
 			        'password_input' => $this->input->post('password')
 			    );
 
@@ -69,7 +69,7 @@ class Signup extends CI_Controller {
 		} 
 
 		$data['fullname'] = $this->input->post('fullname');
-		$data['location'] = $this->input->post('location');
+		$data['company_name'] = $this->input->post('company_name');
 		$data['email'] = $this->input->post('email');
 
 
@@ -119,7 +119,7 @@ class Signup extends CI_Controller {
 		$newUser = array(
 	        'fullname' => $this->input->post('fullname'),
 	        'email' => $this->input->post('email'),
-	        'location' => $this->input->post('location'),
+	        'company_name' => $this->input->post('company_name'),
 	        'password_input' => $this->input->post('password')
 	    );
 

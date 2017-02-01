@@ -11,7 +11,7 @@ class Apply extends CI_Controller {
 
     public function index() {
     	
-        show_404();
+        //show_404();
 
     	$this->load->model('job_model');
 
@@ -37,6 +37,12 @@ class Apply extends CI_Controller {
     	} else {
     		show_404();
     	}
+
+        $logo_filename = $jobDetails['user_id'].'_logo.png';
+        $url_logo = "./uploads/".$logo_filename;
+        if(file_exists($url_logo)) {
+            $data['logo_filename'] = $logo_filename;
+        }
 
     	$this->load->view('templates/header');
 		$this->load->view('templates/powered_by');
@@ -152,7 +158,33 @@ class Apply extends CI_Controller {
 
             mail($to, $subject, $body, $headers);
 
+            //CUSTOM EMAIL TO CANDIDATE
+
+
+            $this->load->library('email');
+
+            $this->email->from('webmaster@nudj.co', 'Nudj');
+            $this->email->to($this->input->post('email'));
+            $this->email->set_mailtype("html");
+
+            $this->email->subject('Application received');
+            $this->email->message('<html>
+                                  <body>
+                                  <br/>
+                                    <p>Hey '.ucfirst($applicationCreated['name']).',</p>
+                                    <p>Your application has been received. The hirer will be in touch shortly to tell you more about the role. </p>
+                                    <br/>
+                                    <p>Best of luck</p>
+                                    <p>Love<br/> Team Nudj x</p>
+                                    <br/><br/>
+                                  </body>
+                                  </html>');
+
+            $this->email->send();
+
+
     }
+
 
 	public function cef_man()
 	{
