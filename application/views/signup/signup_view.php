@@ -58,11 +58,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	        function(googleUser) {
 
 	        	var profile = googleUser.getBasicProfile();
-			    console.log('ID: ' + profile.getId()); 
+			    console.log('ID: ' + profile.getId());
 			    console.log('Name: ' + profile.getName());
 			    console.log('Email: ' + profile.getEmail());
 			    console.log('Image URL: ' + profile.getImageUrl());
-			    
+
 
 	          //document.getElementById('name').innerText = "Signed in: " + googleUser.getBasicProfile().getName();
 	          var name = profile.getName();
@@ -91,7 +91,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 	  <!--  LINKEDIN   -->
-	  <script type="text/javascript" src="//platform.linkedin.com/in.js"> 
+	  <script type="text/javascript" src="//platform.linkedin.com/in.js">
 	    api_key:86lnk250lhvlkr
 	    authorize: true
     	onLoad: onLinkedInLoad
@@ -99,7 +99,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 <script type="text/javascript">
-    
+
     // Setup an event listener to make an API call once auth is complete
     function onLinkedInLoad() {
         IN.Event.on(IN, "auth", getProfileData);
@@ -159,8 +159,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="signup-container">
 
 	<div class="signup-box">
-		<p class="nudj-title">Request Access</p>
-		<p class="nudj-description">Nudj is the easiest and most effective way to hire via referrals. To try out the platform today, sign up below.</p>
+		<p class="nudj-title">Good things come to those who... Nudj</p>
+		<p class="nudj-description">We're not quite ready for everyone yet, but if you're desperate then leave your details below and we'll get back to you.</p>
 
 		<div class="login-buttons">
 			<div id="google-button" class="customGPlusSignIn"></div>
@@ -192,7 +192,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<p><span class="nudj-description">Already have Access?</span> <a href=<?php echo base_url()."signin"; ?>>Sign in</a></p>
 		</div>
 	</div>
-	
+
 </div>
 
 <script>startApp();</script>

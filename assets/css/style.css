@@ -1,12 +1,12 @@
 @import url("fonts-style.css");
 @import url("colors-style.css");
-
 /* Master Styles */
 h1 {
   color: #369;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 250%;
 }
+
 h2, h3 {
   color: #444;
   font-family: Arial, Helvetica, sans-serif;
@@ -14,19 +14,21 @@ h2, h3 {
 }
 
 button {
-  cursor:pointer;
-	background: none;
-	border: none;
+  cursor: pointer;
+  background: none;
+  border: none;
 }
 
-button:focus {outline: none;}
+button:focus {
+  outline: none;
+}
 
 input {
   -webkit-appearance: none;
 }
 
 input:focus {
-    outline:none !important;
+  outline: none !important;
 }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
@@ -34,7 +36,6 @@ input:focus {
 }
 
 /************** BODY ************/
-
 body {
   margin: 0px;
 }
@@ -42,7 +43,7 @@ body {
 a {
   text-decoration: none;
   color: var(--green);
-  font-weight:normal; 
+  font-weight: normal;
 }
 
 /************ BUTTONS **************/
@@ -50,7 +51,7 @@ a {
   background-color: var(--green);
   border-radius: 19px;
   color: #fff;
-  font-size: 13px;
+  font-size: 16px;
   font-family: Avenir;
   padding: 6px 23px;
   font-weight: 300;
@@ -68,10 +69,10 @@ a {
   font-weight: 300;
   margin-left: 5px;
 }
-/************** MENU ************/
 
+/************** MENU ************/
 .menu {
-  width:100%;
+  width: 100%;
   position: fixed;
   top: 0;
   background: white;
@@ -96,7 +97,7 @@ a {
 }
 
 .menu .menu-options {
-  float:right;
+  float: right;
 }
 
 .menu .menu-options .menu-regular-button {
@@ -120,13 +121,12 @@ a {
 }
 
 /******************  HEADER  ****************/
-
 .header {
   width: 70%;
   margin: auto;
-  background-size:cover;
-  position:relative;
-  height:100vh;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
 }
 
 .header .header-title {
@@ -148,16 +148,11 @@ a {
 }
 
 /*            POWERED            */
-.powered {
-
-}
-
-
 /*       HOME - SECTION 1          */
 .home-section1 {
-  width:70%;
-  margin:auto;
-  padding-top:130px;
+  width: 70%;
+  margin: auto;
+  padding-top: 130px;
   margin-bottom: 50px;
   visibility: hidden;
 }
@@ -220,17 +215,15 @@ a {
 }
 
 /*     HOME - SECTION 2     */
-
 .home-section2 {
-  width:70%;
-  margin:auto;
+  width: 70%;
+  margin: auto;
 }
 
 /*     HOME - SECTION 3     */
-
 .home-section3 {
-  width:70%;
-  margin:auto;
+  width: 70%;
+  margin: auto;
 }
 
 .home-section3 .home-gallery-img {
@@ -246,12 +239,10 @@ a {
   max-width: 400px;
 }
 
-
 /*     HOME - SECTION 4     */
-
 .home-section4 {
-  width:70%;
-  margin:auto;
+  width: 70%;
+  margin: auto;
 }
 
 .home-section4 .home-client-gallery {
@@ -269,13 +260,11 @@ a {
 }
 
 /*     HOME - SECTION 5     */
-
 .home-section5 {
-  width:70%;
-  margin:auto;
+  width: 70%;
+  margin: auto;
   margin-bottom: 60px;
 }
-
 
 .home-section5-button-container {
   width: 241px;
@@ -298,10 +287,9 @@ a {
   margin: auto;
 }
 
-
 /*          FOOTER           */
 .footer {
-  width:100%;
+  width: 100%;
 }
 
 .footer .footer-content {
@@ -332,8 +320,8 @@ a {
 }
 
 .footer .footer-social-icons {
-	float: right;
-	width: 17%;
+  float: right;
+  width: 17%;
   display: inline;
 }
 
@@ -344,16 +332,15 @@ a {
 }
 
 .footer .footer-social-icons button {
-	width: 10px;
-	padding: 9px 13px;
+  width: 10px;
+  padding: 9px 13px;
 }
 
 .footer .footer-social-icons img {
-	width: 10px;
+  width: 10px;
 }
 
 /*      DELIMITERS      */
-
 .delimiter {
   height: 170px;
   width: 1px;
@@ -378,23 +365,21 @@ a {
 }
 
 .max-width340 {
-    max-width: 340px;
-    margin: auto;
+  max-width: 340px;
+  margin: auto;
 }
 
 .max-width370 {
-    max-width: 370px;
-    margin: auto;
+  max-width: 370px;
+  margin: auto;
 }
 
 .max-width520 {
-    max-width: 520px;
-    margin: auto;
+  max-width: 520px;
+  margin: auto;
 }
 
-
 /*        BE RIGHT BACK     */
-
 .beback-text {
   font-size: 10px;
   font-family: 'Gotham Rounded Medium';
@@ -404,9 +389,9 @@ a {
 .berightback {
   width: 80%;
   margin: auto;
-  background-size:cover;
-  position:relative;
-  height:100vh;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
 }
 
 .cotent-back {
@@ -427,7 +412,7 @@ a {
 
 .success {
   width: 250px;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 .success img {
@@ -437,7 +422,7 @@ a {
 
 .back {
   width: 190px;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 .back img {

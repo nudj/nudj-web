@@ -13,8 +13,8 @@
       <p class="client-location">London, United Kingdom</p>
       <p class="client-salary">SALARY: £30-40,000 <span><img src=<?php echo asset_url()."images/nudj-logo.png";?> /> BONUS: £500</span></p>
       <div class="apply-container">
-        <button class="apply-button" onclick=<?php echo "window.location.href='".base_url()."explore/cefinn/ma17001'";?> type="button">APPLY</button>
-        <button class="apply-button2" id="nudj-button" type="button">Nudj TO A FRIEND</button>
+        <button class="apply-button" onclick=<?php echo "window.location.href='".base_url()."explore/cefinn/ma17001'";?> type="button">Apply</button>
+        <button class="apply-button2" id="nudj-button" type="button">Nudj to a friend</button>
         <button class="copy-button2" data-clipboard-text=<?php echo current_url();?> id="copy-button" type="button">COPY LINK TO CLIPBOARD</button>
         <div class="addthis_inline_share_toolbox_nslb" ></div>
         <!--<button class="nudj-button" type="button">Nudj to a Friend</button>-->
@@ -51,7 +51,7 @@
     <p class = "client-section-pretitle">WE'RE LOOKING FOR A</p>
     <p class="client-section-title max-width920">a motivated and entrepreneurial ecommerce manager to
 join our exciting, London-based fashion brand, to start as soon as possible.</p>
-    
+
     <div class = "vertical-delimiter margin-top45"></div>
   </div>
 
@@ -135,7 +135,7 @@ join our exciting, London-based fashion brand, to start as soon as possible.</p>
   <div class = "client-section5">
     <p class="client-section-title">SO WHAT ARE YOU WAITING FOR</p>
     <div class="client-section-button-containerB">
-      <button class="apply-buttonB" onclick=<?php echo "window.location.href='".base_url()."explore/cefinn/ma17001'";?> type="button">APPLY</button>
+      <button class="apply-buttonB" onclick=<?php echo "window.location.href='".base_url()."explore/cefinn/ma17001'";?> type="button">Apply</button>
       <button class="apply-button2B" id="nudj-buttonB" type="button">Nudj TO A FRIEND</button>
         <button class="copy-buttonB" data-clipboard-text=<?php echo current_url();?> id="copy-buttonB" type="button">COPY LINK TO CLIPBOARD</button>
         <div class="addthis_inline_share_toolbox_nslb margin-left60"></div>
@@ -153,7 +153,7 @@ join our exciting, London-based fashion brand, to start as soon as possible.</p>
       </div>
       <div class="right-side">
         <div class="apply-container">
-        <button class="apply-button" onclick=<?php echo "window.location.href='".base_url()."explore/cefinn/ma17001'";?> type="button">APPLY</button>
+        <button class="apply-button" onclick=<?php echo "window.location.href='".base_url()."explore/cefinn/ma17001'";?> type="button">Apply</button>
         <button class="apply-button2" id="nudj-button3" type="button">Nudj TO A FRIEND</button>
         <button class="copy-button3" data-clipboard-text=<?php echo current_url();?> id="copy-button3" type="button">COPY LINK TO CLIPBOARD</button>
       </div>
@@ -183,7 +183,7 @@ join our exciting, London-based fashion brand, to start as soon as possible.</p>
     function doCheck() {
         //var notification  = $('.notification');
         var elementToDetect = $('#client-header');
-        
+
         if (elementToDetect.isVisible()) {
           $("#fixed-footer").hide();
             //notification.html('element is visible');
@@ -275,6 +275,3 @@ join our exciting, London-based fashion brand, to start as soon as possible.</p>
 
 
 <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-583eb0fd3cb92ff2"></script>
-
-
-

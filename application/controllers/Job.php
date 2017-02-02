@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Job extends CI_Controller {
 
-	
+
 	public function __construct()
     {
         parent::__construct();
@@ -82,7 +82,7 @@ class Job extends CI_Controller {
 
 
 		if($this->input->post('job_id')) {
-    		
+
     		$newReferral = array(
 			        'fullname' => $this->input->post('name'),
 			        'email' => $this->input->post('email'),
@@ -123,15 +123,15 @@ class Job extends CI_Controller {
 									        <br/>
 									        <a href="'.$url.'">'.$url.'</a>
 									        <br/><br/>
-									        <p>You can now share this with your friends. 
-									        If they get hired we will know they came from you and 
+									        <p>You can now share this with your friends.
+									        If they get hired we will know they came from you and
 									        we can send you the reward. </p>
 
-									        <p>Don’t over think a referral. If you think your friend 
-									        might be interested, just ping it to them. They will 
-									        appreciate you thinking of them. They are in complete 
-									        control so can opt in if they want to and they are only 
-									        known to the hirer if the apply. </p>
+									        <p>Don’t over think a referral. If you think your friend
+									        might be interested, just ping it to them. They will
+									        appreciate you thinking of them. They are in complete
+									        control so can opt in if they want to and they are only
+									        known to the hirer if they apply. </p>
 
 									        <p>Love<br/> Team Nudj x</p>
 									        <br/><br/>
@@ -162,7 +162,7 @@ class Job extends CI_Controller {
     }
 
     public function preview() {
-    	
+
     	$this->load->model('user_model');
 
     	$previewJob = $this->session->userdata('previewJob');

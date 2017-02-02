@@ -11,8 +11,8 @@
       <p class="client-job">HEAD OF TALENT &amp; DEVELOPMENT</p>
       <p class="client-location">London, United Kingdom</p>
       <div class="apply-container">
-        <button class="apply-button" onclick=<?php echo "window.location.href='".base_url()."explore/charlottetilbury/HR17001'";?> type="button">APPLY</button>
-        <button class="apply-button2" id="nudj-button" type="button">Nudj TO A FRIEND</button>
+        <button class="apply-button" onclick=<?php echo "window.location.href='".base_url()."explore/charlottetilbury/HR17001'";?> type="button">Apply</button>
+        <button class="apply-button2" id="nudj-button" type="button">Nudj to friend</button>
         <button class="copy-button" data-clipboard-text=<?php echo current_url();?> id="copy-button" type="button">COPY LINK TO CLIPBOARD</button>
         <div class="addthis_inline_share_toolbox"></div>
         <!--<button class="nudj-button" type="button">Nudj to a Friend</button>-->
@@ -173,10 +173,10 @@
   <div class = "client-section5">
     <p class="client-section-title">SO WHAT ARE YOU WAITING FOR</p>
     <div class="client-section-button-containerB">
-      <button class="apply-buttonB" onclick=<?php echo "window.location.href='".base_url()."explore/charlottetilbury/HR17001'";?> type="button">APPLY</button>
-      <button class="apply-button2B" id="nudj-buttonB" type="button">Nudj TO A FRIEND</button>
+      <button class="apply-buttonB" onclick=<?php echo "window.location.href='".base_url()."explore/charlottetilbury/HR17001'";?> type="button">Apply</button>
+      <button class="apply-button2B" id="nudj-buttonB" type="button">Nudj to friend</button>
         <button class="copy-buttonB" data-clipboard-text=<?php echo current_url();?> id="copy-buttonB" type="button">COPY LINK TO CLIPBOARD</button>
-        <div class="addthis_inline_share_toolbox margin-left33"></div>
+        <div class="addthis_inline_share_toolbox"></div>
       <br/>
       <!-- <button class="client-nudj-button">NUDJ TO A FRIEND</button> -->
     </div>
@@ -226,5 +226,3 @@
 
 
 <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-583eb0fd3cb92ff2"></script>
-
-

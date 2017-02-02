@@ -59,11 +59,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	        function(googleUser) {
 
 	        	var profile = googleUser.getBasicProfile();
-			    console.log('ID: ' + profile.getId()); 
+			    console.log('ID: ' + profile.getId());
 			    console.log('Name: ' + profile.getName());
 			    console.log('Email: ' + profile.getEmail());
 			    console.log('Image URL: ' + profile.getImageUrl());
-			    
+
 
 	          //document.getElementById('name').innerText = "Signed in: " + googleUser.getBasicProfile().getName();
 	          var name = profile.getName();
@@ -96,7 +96,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 	  <!--  LINKEDIN   -->
-	  <script type="text/javascript" src="//platform.linkedin.com/in.js"> 
+	  <script type="text/javascript" src="//platform.linkedin.com/in.js">
 	    api_key:86lnk250lhvlkr
 	    authorize: true
     	onLoad: onLinkedInLoad
@@ -104,7 +104,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 <script type="text/javascript">
-    
+
     // Setup an event listener to make an API call once auth is complete
     function onLinkedInLoad() {
         IN.Event.on(IN, "auth", getProfileData);
@@ -115,7 +115,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         console.log(data);
 
         //var profile = googleUser.getBasicProfile();
-		//console.log('headline: ' + data['headline']); 
+		//console.log('headline: ' + data['headline']);
 	    //console.log('Name: ' + data['formattedName']);
 	    //console.log('Email: ' + profile.getEmail());
 	    //console.log('Image URL: ' + data['pictureUrls']['values'][0]);
@@ -173,8 +173,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="signup-container">
 
 	<div class="signin-box">
-		<p class="nudj-title">Sign In</p>
-		<p class="nudj-description">Get yourself back in there, you have jobs to fill.</p>
+		<p class="nudj-title">Welcome back!</p>
+		<p class="nudj-description">It's good to see you again! You're looking particularly lovely today.</p>
 
 		<div class="login-buttons">
 			<div id="google-button" class="customGPlusSignIn"></div>
@@ -189,7 +189,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<!-- <form id="form-signup" class="form-signup" action="" method="post"> -->
 			<?php echo form_open('signin'); ?>
 			<div class="form-signup">
-				<?php if( isset($error) && $error) echo '<p class="error">Incorrect credentials.</p>';?>
+				<?php if( isset($error) && $error) echo '<p class="error">Hmm... That doesn\'t look right. Try again.</p>';?>
 				<input  class="input-signup" placeholder="E-Mail" name="email" type="text" value=<?php if(isset($email)) echo $email;?> >
 				<input class="input-signup" placeholder="Password" name="password" type="password" >
 				<input class="submit" value="Sign In" name="submit" type="submit" >
@@ -201,7 +201,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<p><span class="nudj-description">Don't have an account?</span> <a href=<?php echo base_url()."signup"; ?>>Sign up</a></p>
 		</div>
 	</div>
-	
+
 </div>
 
 <script>startApp();</script>
