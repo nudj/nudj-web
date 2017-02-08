@@ -1,9 +1,10 @@
 @import url("fonts-style.css");
 @import url("colors-style.css");
+@import url("https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css");
 /* Master Styles */
 h1 {
   color: #369;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'avenir next', avenir, Arial, Helvetica, sans-serif;
   font-size: 250%;
 }
 
