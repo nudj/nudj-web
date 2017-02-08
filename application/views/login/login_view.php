@@ -230,8 +230,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <form class="form-signup measure center avenir" action="" method="post">
                 <p class="f3 fw6 ph0 mh0">Welcome back! 👋</p>
                 <div class="pb2 pt1 bb b--near-white bw1">
-                    <button id="google-button" class="f6 no-underline dib v-mid white ba bg-transparent b--light-silver ph3 pv2 mb2 br1 grow w-30 tc mr2" href="#"><img class="w-60 v-mid" src=<?php echo asset_url()."images/google-icon2.png";?>></img></button>
-                    <button onclick="liAuth()" class="f6 no-underline dib v-mid white ba bg-transparent b--light-silver ph3 pv2 mb2 br1 grow w-30 tc" href="#"><img class="w-60 v-mid" src=<?php echo asset_url()."images/linkedin-icon.png";?>></img></button>
+                    <button id="google-button" class="f6 no-underline dib v-mid white ba bg-transparent b--light-silver ph3 pv2 mb2 br1 grow w-30 tc mr2" href="#"><img class="w-70 v-mid" src=<?php echo asset_url()."images/google-icon2.png";?>></img></button>
+                    <button onclick="liAuth()" class="f6 no-underline dib v-mid white ba bg-transparent b--light-silver ph3 pv2 mb2 br1 grow w-30 tc" href="#"><img class="w-70 v-mid" src=<?php echo asset_url()."images/linkedin-icon.png";?>></img></button>
                 </div>
                 <?php echo form_open('signin'); ?>
                 <div class="mt3">
