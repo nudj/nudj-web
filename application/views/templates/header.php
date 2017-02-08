@@ -13,8 +13,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
               crossorigin="anonymous"></script>
 
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
-
     <link rel="stylesheet" href=<?php echo asset_url()."css/style.css"; ?>>
     <link rel="stylesheet" href=<?php echo asset_url()."css/dashboard-style.css"; ?>>
     <link rel="stylesheet" href=<?php echo asset_url()."css/addjob-style.css"; ?>>
@@ -25,9 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href=<?php echo asset_url()."css/apply-style.css";?>>
     <link rel="stylesheet" href=<?php echo asset_url()."css/responsive-style.css";?>>
     <link rel="stylesheet" href=<?php echo asset_url()."css/login-style.css";?>>
-<!--
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script> -->
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css"/>
 </head>
 
 <body>
