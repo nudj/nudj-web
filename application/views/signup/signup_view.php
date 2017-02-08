@@ -103,7 +103,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   </div>
                   <div class="avenir">
                       <?php if( isset($errors)) echo '<p class="error">'.$errors[0].'</p>';?>
-                      <input class="submit b ph3 pv2 input-reset ba b--green bg-green grow pointer f6 dib white br1 avenir" value="Request access" name="submit" type="submit">
+                      <input class="submit fw6 ph3 pv2 input-reset ba b--green bg-green grow pointer f6 dib white br1 avenir" value="Request access" name="submit" type="submit">
                   </div>
                   <div class="lh-copy mt3">
                       <p class="f6">Already have an account? <a class="f6 link dim green" <a href=<?php echo base_url()."signin"; ?>>Sign in</a></p>
