@@ -7,7 +7,7 @@
     <div class="header-container">
     <div class="client-information3">
       <div class="client-logo" >
-        <?php 
+        <?php
             if(isset($logo_filename)) {
               echo '<img src="'.base_url().'uploads/'.$logo_filename.'" />';
             } else {
@@ -19,7 +19,7 @@
       <p class="client-location"><?php if(isset( $job['location'])) echo $job['location']; ?></p>
       <?php if(isset( $job['salary'])) {
             echo '<p class="client-salary">SALARY: ';
-            echo $job['salary']; 
+            echo $job['salary'];
 
             if(isset( $job['referral_bonus'])) {
               echo '<span><img src="'.asset_url().'images/nudj-logo.png" /> BONUS: '.$job['referral_bonus'].'</span>';
@@ -30,7 +30,7 @@
       ?>
       <div class="apply-container">
 
-      <?php 
+      <?php
         $applyURL = "";
         $jobURL = "";
         if(isset($job['job_code'])) {
@@ -40,15 +40,15 @@
             $applyURL = $applyURL."/referral/".$referred_from;
             $jobURL = $jobURL."/referral/".$referred_from;
           }
-        } 
+        }
 
         $tinyURL = file_get_contents('http://tinyurl.com/api-create.php?url='.$jobURL);
       ?>
 
-        <button <?php if(isset($preview_mode)) { echo "disabled"; } ?> class="apply-button" onclick=<?php echo "window.location.href='".$applyURL."'";?> type="button">APPLY</button>
-        <button <?php if(isset($preview_mode)) { echo "disabled"; } ?> class="apply-button2" id="nudj-button" type="button">Nudj TO A FRIEND</button>
+        <button <?php if(isset($preview_mode)) { echo "disabled"; } ?> class="apply-button" onclick=<?php echo "window.location.href='".$applyURL."'";?> type="button">Apply</button>
+        <button <?php if(isset($preview_mode)) { echo "disabled"; } ?> class="apply-button2" id="nudj-button" type="button">Nudj to friend</button>
         <button <?php if(isset($preview_mode)) { echo "disabled"; } ?> class="copy-button" data-clipboard-text=<?php echo current_url();?> id="copy-button" type="button">COPY LINK TO CLIPBOARD</button>
-        <div class="addthis_inline_share_toolbox" data-url="<?php echo $tinyURL; ?>" data-title="<?php if(isset($createdByUser['company_name'])) echo $createdByUser['company_name']; ?> is hiring and are looking for referrals. Check out the job here: " ></div> 
+        <div class="addthis_inline_share_toolbox" data-url="<?php echo $tinyURL; ?>" data-title="<?php if(isset($createdByUser['company_name'])) echo $createdByUser['company_name']; ?> is hiring and are looking for referrals. Check out the job here: " ></div>
 
         <!--  data-url="http://google.com" data-description="Description DESCRIPTION" data-title="THE TITLE" data-media="http://www.w3schools.com/css/img_fjords.jpg" -->
 
@@ -60,7 +60,7 @@
 
     <div class="client-photo2">
       <div class="inside-photo">
-        <?php 
+        <?php
             if(isset($cover_filename)) {
               echo '<img  class="photo4" src="'.base_url().'uploads/'.$cover_filename.'" />';
             } else {
@@ -79,7 +79,7 @@
 
 
 <?php
-    
+
     if(isset($createdByUser['company_about']) || isset($createdByUser['company_about_header'])) {
 
         echo '<div class = "client-section1">';
@@ -96,7 +96,7 @@
 
           $url = $createdByUser['company_website'];
           if(strpos( $url , 'http' ) !== false) {
-           
+
           } else {
             $url = 'http://'.$createdByUser['company_website'];
           }
@@ -105,7 +105,7 @@
                   <button onclick="window.open(\''.$url.'\')" class="client-section-button">LEARN MORE</button>
                 </div>';
         }
-    
+
     echo '</div>
           <div class="delimiter margin-bottom0">
           </div>';
@@ -113,7 +113,7 @@
 ?>
 
 <?php
-    
+
     if(isset($job['brief']) || isset($job['description_job'])) {
 
       echo '<div class = "client-section2 padding-top100">
@@ -154,7 +154,7 @@
       }
 
       if(isset($job['preferences']) && !empty($job['preferences'])) {
-        
+
         //print_r($job['preferences']);
 
         if(!is_array($job['preferences'])) {
@@ -170,7 +170,7 @@
         echo '<div class = "client-section3">';
 
 
-     
+
       if(count($skills)) {
 
         //print_r($job['skills']);
@@ -188,15 +188,15 @@
                 }
 
 
-                echo '    
+                echo '
                     </ul>
                     <div class = "vertical-delimiter margin-top45 margin-bottom45"></div>';
         }
 
-        
+
       }
 
-  
+
       if(count($preferences)) {
 
         if(!empty($preferences)) {
@@ -228,10 +228,10 @@
   <div class = "client-section5">
     <p class="client-section-title">SO WHAT ARE YOU WAITING FOR</p>
     <div class="client-section-button-containerB">
-      <button <?php if(isset($preview_mode)) { echo "disabled"; } ?> class="apply-buttonB" onclick=<?php echo "window.location.href='".$applyURL."'";?> type="button">APPLY</button>
-      <button <?php if(isset($preview_mode)) { echo "disabled"; } ?> class="apply-button2B" id="nudj-buttonB" type="button">Nudj TO A FRIEND</button>
+      <button <?php if(isset($preview_mode)) { echo "disabled"; } ?> class="apply-buttonB" onclick=<?php echo "window.location.href='".$applyURL."'";?> type="button">Apply</button>
+      <button <?php if(isset($preview_mode)) { echo "disabled"; } ?> class="apply-button2B" id="nudj-buttonB" type="button">Nudj to friend</button>
       <button <?php if(isset($preview_mode)) { echo "disabled"; } ?> class="copy-buttonB" data-clipboard-text=<?php echo current_url();?> id="copy-buttonB" type="button">COPY LINK TO CLIPBOARD</button>
-      <div class="addthis_inline_share_toolbox margin-left33" data-url="<?php echo $tinyURL; ?>" data-title="<?php if(isset($createdByUser['company_name'])) echo $createdByUser['company_name']; ?> is hiring and are looking for referrals. Check out the job here: " ></div>
+      <div class="addthis_inline_share_toolbox" data-url="<?php echo $tinyURL; ?>" data-title="<?php if(isset($createdByUser['company_name'])) echo $createdByUser['company_name']; ?> is hiring and are looking for referrals. Check out the job here: " ></div>
       <br/>
       <!-- <button class="client-nudj-button">NUDJ TO A FRIEND</button> -->
     </div>
@@ -250,29 +250,24 @@
 
 </div>
 <div class="referral-box">
-    <div class="referral-title">Enter your details</div>
-    <div class="referral-description">If your friend gets the job we want to make sure you get the reward, so we need to know who you are</div>
+    <div class="referral-title">Get paid for your recommendation</div>
+    <div class="referral-description">If the person you refer gets the job we want to make sure you get the reward, so we need to know who you are.</div>
     <form id="form-ref" class="referral-form">
       <?php if(isset($referred_from)) {
         echo '<input type="hidden" value="'.$referred_from.'" name="referred-from" >';
       }
       ?>
       <input type="hidden" value=<?php if (isset($job['job_code'])) echo $job['job_code'];?> name="job-id" >
-      <label>Your Name</label>
-      <br/><input class="referral-input" type="text" placeholder="Your Name" autocomplete="off" name="name-referral">
-      <br/><label>Your E-mail Address</label>
-      <br/><input class="referral-input" type="text" placeholder="Your E-mail Address" autocomplete="off" name="email-referral">
-      <br/><label>Relationship to referee <span>(optional)</span></label>
-      <br/><input class="referral-input" type="text" placeholder="e.g. Worked together at the Top of the Pops" autocomplete="off" name="relationship-referral">
-<!--  <div class="referral-input" id="relationship-referral">e.g. Worked together at the Top of the Pops</div>
-      <div id="relationship-options">
+      <input class="referral-input" type="text" placeholder="Your Name" autocomplete="off" name="name-referral">
+      <input class="referral-input" type="text" placeholder="Your E-mail Address" autocomplete="off" name="email-referral">
+      <!-- <div id="relationship-options">
         <ul>
           <li>Friend</li>
           <li>Family</li>
           <li>Colleague</li>
         </ul>
-      </div>
--->
+      </div> -->
+
       <input class="referral-submit" type="submit" value="Get Unique Nudj Link" name="submit-referral">
     </form>
 </div>
@@ -304,7 +299,7 @@
 
                 if(isset($createdByUser['company_name'])) {
                   $companyName = $createdByUser['company_name'];
-                } 
+                }
 
                 if(isset($createdByUser['fullname'])) {
 
@@ -319,14 +314,14 @@
                 </div>';
 
                 echo '<div class="referral-nudj-small-message">
-                  Nudj is a hidden job network. Companies who are hiring ask their friends 
-                  and employees to recommend those they think are awesome. You will only 
-                  hear about the best job opportunities from people you know. So you can 
-                  say goodbye to recruiter spam once and for all. 
+                  Nudj is a hidden job network. Companies who are hiring ask their friends
+                  and employees to recommend those they think are awesome. You will only
+                  hear about the best job opportunities from people you know. So you can
+                  say goodbye to recruiter spam once and for all.
                 </div>';
 
                 echo '<br/><div class="referral-nudj-small-message display-inline">
-                      *Not looking? You can still nudj the job on again. 
+                      *Not looking? You can still nudj the job on again.
                       </div>
 
                       <button class="green-button" id="nudj-buttonC" type="button">Nudj To a Friend</button>';
@@ -335,7 +330,7 @@
               } else {
 
                 echo '<div class="referral-nudj-message">
-                  <span class="referral-emphasize">'.$createdByFirstname.'</span> at <span class="referral-emphasize">'.$companyName.'</span> is hiring '.$preposition.' <span class="referral-emphasize">'.$job['title_job'].'</span> 
+                  <span class="referral-emphasize">'.$createdByFirstname.'</span> at <span class="referral-emphasize">'.$companyName.'</span> is hiring '.$preposition.' <span class="referral-emphasize">'.$job['title_job'].'</span>
                   and you\'re the one to help them find the perfect person.
                 </div>';
 
@@ -352,7 +347,7 @@
                 }
 
               }
-             
+
               echo '<div class="clear-both"></div>
                     <br/>
                       <button id="dismiss-referral-nudj" class="green-button">View Job</div>
@@ -424,7 +419,7 @@
           //console.log('dsffdgssd');
 
           $('input[type="submit"]').attr('disabled','disabled');
-          
+
           var subfolder = "";
           var base_url = document.location.origin;
 
@@ -447,7 +442,7 @@
           console.log("rel " + relationship);
 
           var job_id = $('[name="job-id"]').val();
-          
+
           if($('[name="referred-from"]').length) {
             referred_from = $('[name="referred-from"]').val();
           }
@@ -459,22 +454,22 @@
 
           $.ajax({
             type: 'POST',
-            url: url, //this should be url to your PHP file 
+            url: url, //this should be url to your PHP file
             dataType: 'html',
             data: { 'name':name, 'job_url':window.location.href, 'companyName':companyName, 'email': email, 'relationship':relationship, 'referred_from': referred_from, 'job_id':job_id},
             complete: function() { console.log("complete?");$('input[type="submit"]').removeAttr("disabled");},
-            success: function(stream) { 
+            success: function(stream) {
                     $('input[type="submit"]').removeAttr("disabled");
-                    $('#form-ref')[0].reset(); 
-                    //$('.referral-unique-link').fadeIn('fast'); 
+                    $('#form-ref')[0].reset();
+                    //$('.referral-unique-link').fadeIn('fast');
                     //$('.referral-box').fadeOut('fast');
-                    //$('.popup-referral').fadeOut('fast'); 
-                    //$('.referral-url').empty(); 
-                    //$('.referral-url').append(result_url+stream); 
+                    //$('.popup-referral').fadeOut('fast');
+                    //$('.referral-url').empty();
+                    //$('.referral-url').append(result_url+stream);
                     //var urlResult = result_url+stream;
                     window.location.href = redirect;
                     //getTinyURL(urlResult);
-                    
+
                     //$('body').addClass('stop-scrolling');
                   }
           });
@@ -563,11 +558,11 @@
 });
 
 function CopyToClipboard(containerid) {
-if (document.selection) { 
+if (document.selection) {
     var range = document.body.createTextRange();
     range.moveToElementText(document.getElementById(containerid));
     range.select().createTextRange();
-    document.execCommand("Copy"); 
+    document.execCommand("Copy");
 
 } else if (window.getSelection) {
     var range = document.createRange();

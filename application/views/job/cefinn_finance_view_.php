@@ -13,8 +13,8 @@
       <p class="client-location">London, United Kingdom</p>
       <p class="client-salary2"><span><img src=<?php echo asset_url()."images/nudj-logo.png";?> /> BONUS: £500</span></p>
       <div class="apply-container">
-        <button class="apply-button" onclick=<?php echo "window.location.href='".base_url()."explore/cefinn/ma17002'";?> type="button">APPLY</button>
-        <button class="apply-button2" id="nudj-button" type="button">Nudj TO A FRIEND</button>
+        <button class="apply-button" onclick=<?php echo "window.location.href='".base_url()."explore/cefinn/ma17002'";?> type="button">Apply</button>
+        <button class="apply-button2" id="nudj-button" type="button">Nudj to friend</button>
         <button class="copy-button2" data-clipboard-text=<?php echo current_url();?> id="copy-button" type="button">COPY LINK TO CLIPBOARD</button>
         <div class="addthis_inline_share_toolbox_nslb"></div>
         <!--<button class="nudj-button" type="button">Nudj to a Friend</button>-->
@@ -125,8 +125,8 @@ an exciting fashion design and retail start up.
   <div class = "client-section5">
     <p class="client-section-title">SO WHAT ARE YOU WAITING FOR</p>
     <div class="client-section-button-containerB">
-      <button class="apply-buttonB" onclick=<?php echo "window.location.href='".base_url()."explore/cefinn/ma17002'";?> type="button">APPLY</button>
-      <button class="apply-button2B" id="nudj-buttonB" type="button">Nudj TO A FRIEND</button>
+      <button class="apply-buttonB" onclick=<?php echo "window.location.href='".base_url()."explore/cefinn/ma17002'";?> type="button">Apply</button>
+      <button class="apply-button2B" id="nudj-buttonB" type="button">Nudj to friend</button>
         <button class="copy-buttonB" data-clipboard-text=<?php echo current_url();?> id="copy-buttonB" type="button">COPY LINK TO CLIPBOARD</button>
         <div class="addthis_inline_share_toolbox_nslb margin-left60"></div>
       <br/>
@@ -143,8 +143,8 @@ an exciting fashion design and retail start up.
       </div>
       <div class="right-side">
         <div class="apply-container">
-        <button class="apply-button" onclick=<?php echo "window.location.href='".base_url()."explore/cefinn/ma17002'";?> type="button">APPLY</button>
-        <button class="apply-button2" id="nudj-button3" type="button">Nudj TO A FRIEND</button>
+        <button class="apply-button" onclick=<?php echo "window.location.href='".base_url()."explore/cefinn/ma17002'";?> type="button">Apply</button>
+        <button class="apply-button2" id="nudj-button3" type="button">Nudj to friend</button>
         <button class="copy-button3" data-clipboard-text=<?php echo current_url();?> id="copy-button3" type="button">COPY LINK TO CLIPBOARD</button>
       </div>
       </div>
