@@ -87,6 +87,8 @@ class Signup extends CI_Controller {
 
 		$this->load->model('user_model');
 
+		$this->newUserSendEmail($user);
+
 		$this->user_model->google_auth($user);
 
 		//redirect(base_url('dashboard'));
@@ -105,9 +107,64 @@ class Signup extends CI_Controller {
 
 		$this->load->model('user_model');
 
+		$this->newUserSendEmail($user);
+
 		$this->user_model->linkedin_auth($user);
 
 		//redirect(base_url('dashboard'));
+	}
+
+	public function newUserSendEmail($user_details) {
+
+		if(isset($user_details['email']) && isset($user_details['fullname']) ) {
+
+			    	$this->load->library('email');
+
+					$this->email->from('hello@nudj.co', 'Nudj');
+					$this->email->to($this->input->post('email'));
+					$this->email->set_mailtype("html");
+
+					$company_name = '';
+					if(isset($user_details['company_name'])) {
+						$company_name = $user_details['company_name'];
+					}
+
+					$linkedin = '-';
+					if(isset($user_details['linkedin_profile'])) {
+						$linkedin = $user_details['linkedin_profile'];
+					}
+
+					$gmail = '-';
+					if(isset($user_details['profile_url'])) {
+						$gmail = $user_details['profile_url'];
+					}
+
+
+					$this->email->subject('New user has signed up');
+					$this->email->message('<html>
+									      <body>
+									      <br/>
+									        <p>Hi Robyn,</p>
+									        <p>A new user has signed up.</p>
+									        <br/><br/>
+
+									        <p> 
+									        	<strong>Full name:<strong> '.$user_details['fullname'].'<br/>
+									        	<strong>Email:<strong> '.$user_details['email'].'<br/>
+									        	<strong>Company Name:<strong> '.$company_name.'<br/>
+									        	<strong>Linkedin:<strong> '.$linkedin.'<br/>
+									        	<strong>Gmail:<strong> '.$user_details['gmail'].'<br/>
+									        </p>
+
+									        <br/><br/>
+									        <p>Love<br/> Team Nudj x</p>
+									        <br/><br/>
+									      </body>
+									      </html>');
+
+					$this->email->send();
+		    	}
+
 	}
 
 	public function actionSignup() 
@@ -124,6 +181,8 @@ class Signup extends CI_Controller {
 	    );
 
 		$this->user_model->signup($newUser);
+
+		$this->newUserSendEmail($newUser);
 
 		redirect(base_url('dashboard'));
 	}
