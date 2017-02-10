@@ -110,7 +110,7 @@ class Job extends CI_Controller {
 
 			    	$this->load->library('email');
 
-					$this->email->from('webmaster@nudj.co', 'Nudj');
+					$this->email->from('hello@nudj.co', 'Nudj');
 					$this->email->to($this->input->post('email'));
 					$this->email->set_mailtype("html");
 

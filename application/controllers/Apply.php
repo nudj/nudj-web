@@ -136,7 +136,7 @@ class Apply extends CI_Controller {
             $eol = "\r\n";
 
             // main header (multipart mandatory)
-            $headers = "From: Nudj <webmaster@nudj.co>" . $eol;
+            $headers = "From: Nudj <hello@nudj.co>" . $eol;
             $headers .= "MIME-Version: 1.0" . $eol;
             $headers .= "Content-Type: multipart/mixed; boundary=\"" . $separator . "\"" . $eol;
             $headers .= "Content-Transfer-Encoding: 7bit" . $eol;
@@ -163,7 +163,7 @@ class Apply extends CI_Controller {
 
             $this->load->library('email');
 
-            $this->email->from('webmaster@nudj.co', 'Nudj');
+            $this->email->from('hello@nudj.co', 'Nudj');
             $this->email->to($this->input->post('email'));
             $this->email->set_mailtype("html");
 

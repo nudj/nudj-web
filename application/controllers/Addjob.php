@@ -147,7 +147,7 @@ class Addjob extends CI_Controller {
 
 		$this->load->library('email');
 
-            $this->email->from('webmaster@nudj.co', 'Nudj');
+            $this->email->from('hello@nudj.co', 'Nudj');
             $this->email->to('robyn@nudj.co');//carmenelena.albu@gmail.com
             $this->email->set_mailtype("html");
 

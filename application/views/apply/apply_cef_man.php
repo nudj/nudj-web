@@ -2,35 +2,14 @@
 
 <?php
   error_reporting(E_ERROR);
-  /* ==========================  Define variables ========================== */
-
-  #Your e-mail address
-  define("__TO__", "carmenelena.albu@gmail.com");
-
-  #Message subject
-  define("__SUBJECT__", "Support - Contact");
-
-  #Success message
-  define('__SUCCESS_MESSAGE__', "Your message has been sent. Thank you!");
-
-  #Error message
-  define('__ERROR_MESSAGE__', "Error, your message hasn't been sent");
-
-  #Messege when one or more fields are empty
-  define('__MESSAGE_EMPTY_FILDS__', "Please fill out  all fields");
-
-  /* ========================  End Define variables ======================== */
 
   //Send mail function
   function send_mail($to,$subject,$message,$headers){
     if(@mail($to,$subject,$message,$headers)){
       
-      
-      //echo json_encode(array('info' => 'success', 'msg' => __SUCCESS_MESSAGE__));
     } else {
       header("Location: ".base_url()."success");
       exit;
-      //echo json_encode(array('info' => 'error', 'msg' => __ERROR_MESSAGE__));
     }
   }
 
@@ -60,8 +39,6 @@
     //   //exit();
     // } else {
       //Send Mail
-      $to = __TO__;
-      $subject = __SUBJECT__ . ' ' . $name;
       $messageC = '
       <html>
       <head>
@@ -97,7 +74,7 @@
         $flags = 'style="display:none;"';
 
         //Deal with the email
-        $to = 'robyn@nudj.co';//'carmenelena.albu@gmail.com';//
+        $to = 'robyn@nudj.co';
         $subject = 'Application - Cefinn - ECOMMERCE MANAGER';
 
         $message = $messageC;
@@ -106,7 +83,7 @@
 
         $boundary =md5(date('r', time()));
 
-        $headers = "From: webmaster@nudj.co\r\nReply-To: webmaster@nudj.co";
+        $headers = "From: hello@nudj.co\r\nReply-To: hello@nudj.co";
         $headers .= "\r\nMIME-Version: 1.0\r\nContent-Type: multipart/mixed; boundary=\"_1_$boundary\"";
 
         $message="This is a multi-part message in MIME format.
