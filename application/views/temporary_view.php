@@ -48,13 +48,13 @@
         <div class="absolute w-100">
             <nav class="dt w-100 mw8 center">
                 <div class="dtc w2 v-mid pa3">
-                    <a href="/" class="dib w3 grow-large">
+                    <a href=<?php echo base_url(). ""; ?>  class="dib w3 grow-large">
                         <img src=<?php echo asset_url()."images/nudj-logo-white.png";?>></img>
                     </a>
                 </div>
                 <div class="dtc v-mid tr pa3">
-                    <a class="fw6 f6 hover-white no-underline white dn dib-ns pv2 ph3" href=<?php echo base_url(). "login"; ?>>Login</a>
-                    <a class="fw6 f6 hover-white no-underline white dib ml2 pv2 ph3 ba br1" href=<?php echo base_url(). "signup"; ?>>Request access</a>
+                    <a class="fw6 f6 hover-white no-underline white dn dib-ns pv2 ph3" href=<?php echo base_url(). "signin"; ?>>Login</a>
+                    <a class="fw6 f6 hover-white no-underline white dib ml2 pv2 ph3 ba br1" href=<?php echo base_url(). "request"; ?>>Request access</a>
                 </div>
             </nav>
         </div>
@@ -84,7 +84,7 @@
     <section class="vh-100 dt w-100 bg-light-red relative">
         <div class="dtc v-mid tc white ph3 ph6-l">
             <h1 class="f2-m f-subheadline-l fw6 tc white">We're building something that will help. Interested?</h1>
-            <a class="fw6 f6 no-underline grow dib v-mid bg-green white ba b--green ph4 pv3 ma2 br1" href=<?php echo base_url(). "signup"; ?>>Request access</a>
+            <a class="fw6 f6 no-underline grow dib v-mid bg-green white ba b--green ph4 pv3 ma2 br1" href=<?php echo base_url(). "request"; ?>>Request access</a>
             <a class="fw6 f6 no-underline grow dib v-mid white ba b--white ph4 pv3 ma2 br1" href="#" id="open-intercom">Get in touch</a>
         </div>
         <div class="absolute" style="top: 90%; left: 50%; margin-left: -18px;">

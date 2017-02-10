@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
-	
+
 	public function __construct()
     {
         parent::__construct();
@@ -11,7 +11,7 @@ class Login extends CI_Controller {
 	public function index($signin = "")
 	{
 		//show_404();
-		
+
 		$this->load->model('user_model');
 
 		$this->load->helper('form');
@@ -43,11 +43,11 @@ class Login extends CI_Controller {
 
 		$data['email'] = $this->input->post('email');//($this->input->post('email') !== null) ? $this->input->post('email') : '';
 
-		//$this->load->view('templates/header');
+		// $this->load->view('templates/header');
 		$this->load->view('login/login_view', $data);
 		$this->load->view('templates/end_body');
 	}
-
+	
 	public function google_auth() {
 
 		$user['fullname'] = $this->input->post('name');

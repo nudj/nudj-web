@@ -80,6 +80,7 @@ $route['success'] = 'success/index';
 
 $route['signup'] = 'signup/index';
 $route['signin'] = 'login/index';
+$route['request'] = 'request/index';
 $route['signin/google_auth'] = 'login/google_auth';
 $route['signin/linkedin_auth'] = 'login/linkedin_auth';
 
@@ -98,4 +99,3 @@ $route['dashboard'] = 'dashboard/index';
 $route['logout'] = 'dashboard/logout';
 
 $route['profile'] = 'profile/index';
-

@@ -7,7 +7,7 @@
 	    gapi.load('auth2', function(){
 	      // Retrieve the singleton for the GoogleAuth library and set up the client.
 	      auth2 = gapi.auth2.init({
-	        client_id: '1018534519510-6u8v9a1183dnud6lh8t1lputpj983b8q.apps.googleusercontent.com',
+	        client_id: '319494144728-fbrhrh30onvjofnujeagc07l4ppk3ukk.apps.googleusercontent.com',
 	        cookiepolicy: 'single_host_origin',
 	        // Request scopes in addition to 'profile' and 'email'
 	        //scope: 'additional_scope'
@@ -24,8 +24,8 @@
 </script>
 
 <!--  LINKEDIN   -->
-	  <script type="text/javascript" src="//platform.linkedin.com/in.js"> 
-	    api_key:86lnk250lhvlkr
+	  <script type="text/javascript" src="//platform.linkedin.com/in.js">
+	    api_key:77kzipb6vhl8c1
 	    authorize: true
 	    onLoad: onLinkedInLoad
 		</script>
@@ -45,8 +45,8 @@
 		}
 		setTimeout("goToHome()", 1000);
 
-	    //window.location = '/nudj-php/logout';	
-	    	
+	    //window.location = '/nudj-php/logout';
+
 	}
 
 	function goToHome() {
@@ -75,14 +75,14 @@
 	<div class="content">
 
 		<div class="form-container">
-			 
+
 			<div class="form-add-job">
 				<label class="big-label">Personal Details</label><br/>
 				<br/><label>Your Name</label>
 				<input  class="input-job" placeholder="Your Name" name="fullname" type="text" value="<?php if(isset($fullname)) echo $fullname;?>" >
 				<br/><label>Your Email</label>
 				<input  class="input-job" placeholder="Your Email" name="email" type="text" disabled value="<?php if(isset($email)) echo $email;?>" >
-				
+
 
 				<br/><br/><label class="big-label">Company Details</label><br/>
 				<br/><label>Company Name</label>
@@ -95,9 +95,9 @@
 				<textarea class="textarea-job" cols="40" rows="10" name="company_about" type="text" ><?php if(isset($company_about)) echo $company_about;?></textarea>
 				<br/><label>Company Logo</label>
 					<div class="company-logo" >
-						<input name="company_logo" id="company_logo_input" onchange="readURL(this);" type="file" class="input-file" accept="image/*"> 
-			        	
-						<?php 
+						<input name="company_logo" id="company_logo_input" onchange="readURL(this);" type="file" class="input-file" accept="image/*">
+
+						<?php
 								if(isset($company_logo)) {
 									echo '<img id="company_logo" src="'.base_url().'uploads/'.$company_logo.'" />';
 								} else {
@@ -107,22 +107,22 @@
 			      	</div>
 				<br/><label>Company Cover</label>
 					<div class="company-cover" >
-						<input name="company_cover" id="company_cover_input" onchange="readURL(this);" type="file" class="input-file" accept="image/*"> 
-						<?php 
+						<input name="company_cover" id="company_cover_input" onchange="readURL(this);" type="file" class="input-file" accept="image/*">
+						<?php
 								if(isset($company_cover)) {
 									echo '<img id="company_cover" src="'.base_url().'uploads/'.$company_cover.'" />';
 								} else {
 									echo '<img id="company_cover" src="'.asset_url().'images/placeholder.png" />';
 								}
 						?>
-			        	
+
 			      	</div>
 
 				<div class="clear"></div>
 				<br/>
 				<p class="info">Looking good. The company details will feature on the top of every job page so make sure you shout about how great you are. Personal details will be kept hidden.</p>
 				<br/>
-				
+
 				<?php /*if ($this->session->has_userdata('google_auth') && $this->session->userdata('google_auth') == true) {
 						echo '<p style="font-family:Avenir;" ><a onclick="signOut();" href="'.base_url().'logout" >Logout</a></p>';
 					} else if ($this->session->has_userdata('linkedin_auth') && $this->session->userdata('linkedin_auth') == true) {
@@ -134,9 +134,9 @@
 				?>
 
 			</div>
-			
+
 		</div>
-		
+
 	</div>
 </div>
 
@@ -174,7 +174,7 @@
           //console.log('dsffdgssd');
 
           $('input[type="submit"]').attr('disabled','disabled');
-          
+
           var subfolder = "";
           var base_url = document.location.origin;
           if(base_url.includes("localhost")) {
@@ -190,18 +190,18 @@
           var company_about_header = $('[name="company_about_header"]').val();
           var company_website = $('[name="company_website"]').val();
 
-			          
+
 
           var url = base_url + subfolder + "/profile/update";
           var redirect = base_url + subfolder + "/profile";
 
           console.log('url --- ' + url);
 
-          var file_data_cover = $('#company_cover_input').prop("files")[0];   
-		  var form_data = new FormData();                  
+          var file_data_cover = $('#company_cover_input').prop("files")[0];
+		  var form_data = new FormData();
 		  form_data.append('cover', file_data_cover);
 
-		  var file_data_logo = $('#company_logo_input').prop("files")[0];                 
+		  var file_data_logo = $('#company_logo_input').prop("files")[0];
 		  form_data.append('logo', file_data_logo);
 
 		  	form_data.append('fullname',fullname);
@@ -215,13 +215,13 @@
 
           $.ajax({
             type: 'POST',
-            url: url, //this should be url to your PHP file 
+            url: url, //this should be url to your PHP file
             dataType: 'text',
             data: form_data,
             processData: false,  // tell jQuery not to process the data
     		contentType: false,   // tell jQuery not to set contentType
             complete: function() { console.log("complete?");$('input[type="submit"]').removeAttr("disabled");},
-            success: function(stream) { 
+            success: function(stream) {
             		window.location.href = redirect;
                     $('input[type="submit"]').removeAttr("disabled");
                   }

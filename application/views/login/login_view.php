@@ -7,13 +7,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
     <base href="/">
     <meta charset="utf-8">
-    <title>Nudj</title>
+    <title>Nudj - Login</title>
+    <link rel="icon" href=<?php echo asset_url()."images/nudj-square.ico";?> type="image/x-icon"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href=<?php echo asset_url(). "css/style.css"; ?>>
-    
-
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css"/>
-
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
     <!--  Google Sign On -->
@@ -32,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             gapi.load('auth2', function() {
                 // Retrieve the singleton for the GoogleAuth library and set up the client.
                 auth2 = gapi.auth2.init({
-                    client_id: '1018534519510-6u8v9a1183dnud6lh8t1lputpj983b8q.apps.googleusercontent.com',
+                    client_id: '319494144728-fbrhrh30onvjofnujeagc07l4ppk3ukk.apps.googleusercontent.com',
                     cookiepolicy: 'single_host_origin',
                     // Request scopes in addition to 'profile' and 'email'
                     //scope: 'additional_scope'
@@ -64,7 +62,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     //alert('url:' + url);
 
                     //$.post(url, { 'name': name, 'profile_url':profile_url, 'google_email':email, 'google_auth':true });
-
 
                     $.ajax({
                         type: 'POST',
@@ -227,14 +224,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             ';path=/;expires='+new Date(0).toUTCString();i=d.indexOf('.');if(i<0)break;d=d.slice(i+1)}}};
         })(window,document,window['_fs_namespace'],'script','user');
     </script>
-
-    <script>
-  window.intercomSettings = {
-    app_id: "jmk9ujo0"
-  };
-</script>
-<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/jmk9ujo0';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
-
 </head>
 
 <body class="avenir">
@@ -244,12 +233,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <nav class="dt w-100 mw8 center">
                 <div class="dtc w2 v-mid pa3">
-                    <a href="/" class="dib w3 grow">
+                    <a href=<?php echo base_url(). ""; ?> class="dib w3 grow">
                         <img src=<?php echo asset_url()."images/nudj-logo.png";?>></img>
                     </a>
                 </div>
                 <div class="dtc v-mid tr pa3">
-                    <a class="f6 fw6 no-underline bl dib ml2 pv2 ph3 ba br1 black" href=<?php echo base_url(). "signup"; ?>>Request access</a>
+                    <a class="f6 fw6 no-underline bl dib ml2 pv2 ph3 ba br1 black" href=<?php echo base_url(). "request"; ?>>Request access</a>
                 </div>
             </nav>
 
@@ -258,8 +247,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <form class="form-signup measure center avenir" action="" method="post">
                 <p class="f3 fw6 ph0 mh0">Welcome back! 👋</p>
                 <div class="pb2 pt1 bb b--near-white bw1">
-                    <button id="google-button" class="f6 no-underline dib v-mid white ba bg-transparent b--light-silver ph3 pv2 mb2 br1 grow w-30 tc mr2" href="#"><img class="w-70 v-mid" src=<?php echo asset_url()."images/google-icon2.png";?>></img></button>
-                    <button onclick="liAuth()" class="f6 no-underline dib v-mid white ba bg-transparent b--light-silver ph3 pv2 mb2 br1 grow w-30 tc" href="#"><img class="w-70 v-mid" src=<?php echo asset_url()."images/linkedin-icon.png";?>></img></button>
+                    <button id="google-button" class="f6 no-underline dib v-mid white ba bg-transparent b--light-silver ph3 pv2 mb2 br1 grow w-30 tc mr2"><img class="w-70 v-mid" src=<?php echo asset_url()."images/google-icon2.png";?>></img></button>
+                    <button onclick="liAuth()" class="f6 no-underline dib v-mid white ba bg-transparent b--light-silver ph3 pv2 mb2 br1 grow w-30 tc"><img class="w-70 v-mid" src=<?php echo asset_url()."images/linkedin-icon.png";?>></img></button>
                 </div>
                 <?php echo form_open('signin'); ?>
                 <div class="mt3">
@@ -277,7 +266,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <input class="submit fw6 ph3 pv2 input-reset ba b--green bg-green grow pointer f6 dib white br1 avenir" value="Sign In" name="submit" type="submit">
                 </div>
                 <div class="lh-copy mt3">
-                    <p class="f6">Don't have an account? <a class="f6 link dim green" href=<?php echo base_url(). "signup"; ?>>Request access</a></p>
+                    <p class="f6">Don't have an account? <a class="f6 link dim green" href=<?php echo base_url(). "request"; ?>>Request access</a></p>
                 </div>
         </div>
     </div>

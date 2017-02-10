@@ -5,8 +5,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
     <base href="/">
     <meta charset="utf-8">
-    <title>Nudj</title>
+    <title>Nudj - Hire the people you never thought you could.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href=<?php echo asset_url()."images/nudj-square.ico";?> type="image/x-icon"/>
 
     <script
               src="https://code.jquery.com/jquery-3.1.1.min.js"
@@ -24,6 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href=<?php echo asset_url()."css/responsive-style.css";?>>
     <link rel="stylesheet" href=<?php echo asset_url()."css/login-style.css";?>>
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css"/>
+
 <!--
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script> -->
@@ -48,7 +50,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <script>
   window.intercomSettings = {
-    app_id: "jmk9ujo0"
+    app_id: "jmk9ujo0",
+    custom_launcher_selector: '#open-intercom'
   };
 </script>
 <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/jmk9ujo0';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>

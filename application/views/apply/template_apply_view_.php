@@ -6,7 +6,7 @@
   //Send mail function
   function send_mail($to,$subject,$message,$headers){
     if(@mail($to,$subject,$message,$headers)){
-      
+
       header("Location: ".base_url()."success");
       exit;
     } else {
@@ -174,12 +174,8 @@ $attachment
         placeholder="http://www.linkedin.com/jane-smith/1jd90.html"
         name="linkedin" />
         <br/>
-        <input class="client-section-button" type="submit" value="FIND OUT MORE" /> 
+        <input class="client-section-button" type="submit" value="FIND OUT MORE" />
        <!--<button id="submit" type="submit" class="client-section-button" >FIND OUT MORE</button>-->
       </div>
     </form>
   </div>
-
-
-
-

@@ -10,7 +10,7 @@
       gapi.load('auth2', function(){
         // Retrieve the singleton for the GoogleAuth library and set up the client.
         auth2 = gapi.auth2.init({
-          client_id: '1018534519510-6u8v9a1183dnud6lh8t1lputpj983b8q.apps.googleusercontent.com',
+          client_id: '319494144728-fbrhrh30onvjofnujeagc07l4ppk3ukk.apps.googleusercontent.com',
           cookiepolicy: 'single_host_origin',
           // Request scopes in addition to 'profile' and 'email'
           //scope: 'additional_scope'
@@ -27,8 +27,8 @@
 </script>
 
 <!--  LINKEDIN   -->
-    <script type="text/javascript" src="//platform.linkedin.com/in.js"> 
-      api_key:86lnk250lhvlkr
+    <script type="text/javascript" src="//platform.linkedin.com/in.js">
+      api_key:77kzipb6vhl8c1
       authorize: true
       onLoad: onLinkedInLoad
     </script>
@@ -48,8 +48,8 @@
     }
     setTimeout("goToHome()", 1000);
 
-      //window.location = '/nudj-php/logout'; 
-        
+      //window.location = '/nudj-php/logout';
+
   }
 
   var subfolder = "";
@@ -77,7 +77,7 @@
       <div class="footer-content">
         <div class="left-side">
           <p>Welcome to the Dashboard<?php if(isset($firstname)) echo ", ".ucwords($firstname);?></p>
-          <?php 
+          <?php
 
           if ($this->session->has_userdata('google_auth') && $this->session->userdata('google_auth') == true) {
               echo '<a onclick="signOut();" href="'.base_url().'logout" >';
@@ -96,13 +96,13 @@
           ?>
         </div>
         <div class="right-side">
-          
+
           <!-- RIGHT -->
 
         </div>
       </div>
 
-        
+
 
 
 </div>
@@ -115,4 +115,3 @@
 
 </body>
 </html>
-

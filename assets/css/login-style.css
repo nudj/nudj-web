@@ -89,7 +89,7 @@
 }
 
 .form-signup .input-signup {
-  width: 89%;
+  width: 100%;
   margin: 1% auto;
   padding: 12px 5%;
   border: 1px solid var(--lightgrey);
