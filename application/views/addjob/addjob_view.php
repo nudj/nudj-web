@@ -183,7 +183,7 @@
 		    var base_url = document.location.origin;
 
 		    if(base_url.includes("localhost")) { // if local environment
-		    	subfolder = "/nudj-php";
+		    	subfolder = "/nudj-web";
 		    } else if(base_url.includes("zudent")){ // if test environment
 		    	subfolder = "/dev.nudj"; 
 		    }
@@ -243,7 +243,7 @@
 		  	var subfolder = "";
 		    var base_url = document.location.origin;
 		    if(base_url.includes("localhost")) { // if local environment
-		    	subfolder = "/nudj-php";
+		    	subfolder = "/nudj-web";
 		    } else if(base_url.includes("zudent")){ // if test environment
 		    	subfolder = "/dev.nudj"; 
 		    }

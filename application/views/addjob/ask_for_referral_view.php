@@ -137,7 +137,7 @@ $( document ).ready(function() {
     //       var subfolder = "";
     //       var base_url = document.location.origin;
     //       if(base_url.includes("localhost")) {
-    //         subfolder = "/nudj-php";
+    //         subfolder = "/nudj-web";
     //       } else if(base_url.includes("zudent")){
     //         subfolder = "/dev.nudj";
     //       }

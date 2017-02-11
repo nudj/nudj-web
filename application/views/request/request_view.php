@@ -90,8 +90,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
               <nav class="dt w-100 mw8 center">
                   <div class="dtc w2 v-mid pa3">
-                      <a href=<?php echo base_url(). ""; ?> class="dib w3 grow">
-                          <img src=<?php echo asset_url()."images/nudj-logo.png";?>></img>
+                      <a href=<?php echo base_url() ?> class="dib w3 grow">
+                          <img src=<?php echo asset_url()."images/nudj-logo.png";?> >
                       </a>
                   </div>
                   <div class="dtc v-mid tr pa3">
@@ -101,7 +101,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
           </div>
           <div class="dtc v-mid ph3 ph6-l">
-              <form class="form-signup measure center avenir" action="" method="post">
+              <form class="form-signup measure center avenir" action="<?php echo base_url();?>request-success" method="post">
                   <p class="f3 fw6 ph0 mh0">Good things come to those who... Nudj 👊</p>
                   <div class="pb2 pt bb b--near-white bw1">
                   <p>
@@ -111,11 +111,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <?php echo form_open('request'); ?>
                   <div class="mt3">
                       <label class="db fw6 lh-copy f6" for="email-address">Name</label>
-                      <input class="input-signup avenir pa2 ba bg-transparent light-silver w-100 br1 b--light-silver" name="fullname" type="text" value="<?php if(isset($fullname)) echo $fullname;?>" >
+                      <input class="input-signup avenir pa2 ba bg-transparent light-silver w-100 br1 b--light-silver" name="fullname" required type="text" value="<?php if(isset($fullname)) echo $fullname;?>" >
                   </div>
                   <div class="mt3">
                       <label class="db fw6 lh-copy f6" for="email-address">Email</label>
-                      <input class="input-signup avenir pa2 ba bg-transparent light-silver w-100 br1 b--light-silver" name="email" type="text" value="<?php if(isset($email)) echo $email;?>" >
+                      <input class="input-signup avenir pa2 ba bg-transparent light-silver w-100 br1 b--light-silver" name="email" required type="text" value="<?php if(isset($email)) echo $email;?>" >
                   </div>
                   <div class="mv3">
                       <label class="db fw6 lh-copy f6" for="password">Company</label>
@@ -136,9 +136,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </div>
       </div>
       </div>
-
-<!-- Insert footer -->
-
-<script>
-    startApp();
-</script>
